@@ -1,6 +1,6 @@
 {
   "name": "@ztr66/dsh-design-library",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Browse 290 design documents and 44 video styles, register design skills for the agent, check UI against a design system with computed findings, and report exactly what a machine needs to render a code-drawn film.",
   "keywords": [
     "dsh",
