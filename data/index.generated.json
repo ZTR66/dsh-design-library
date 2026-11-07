@@ -1,0 +1,2156 @@
+{
+  "schema": "dsh-design-library/seed/v1",
+  "generatedAt": "2026-11-07T15:19:39.748Z",
+  "bundledSources": [
+    {
+      "dir": "voltagent-awesome-design-md",
+      "folder": "voltagent-awesome-design-md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT"
+    },
+    {
+      "dir": "xdx888999-xdx-lab-design-skill",
+      "folder": "xdx888999-xdx-lab-design-skill",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT"
+    },
+    {
+      "dir": "rahulholkar16-awesome-design-md",
+      "folder": "rahulholkar16-awesome-design-md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT"
+    },
+    {
+      "dir": "abhayjnayakk-awesome-design-md",
+      "folder": "abhayjnayakk-awesome-design-md",
+      "repo": "abhayjnayakk/awesome-design-md",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/changemaner-design-taste-frontend",
+      "folder": "changemaner-design-taste-frontend",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/cozythecoder-frontend-design-md",
+      "folder": "cozythecoder-frontend-design-md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/davidgarciagordo-design-review",
+      "folder": "davidgarciagordo-design-review",
+      "repo": "davidgarciagordo/design-review",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/donkeyking01-tasteful-ui-skill",
+      "folder": "donkeyking01-tasteful-ui-skill",
+      "repo": "DonkeyKing01/tasteful-ui-skill",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/jaywilburn-refactoring-ui-skill",
+      "folder": "jaywilburn-refactoring-ui-skill",
+      "repo": "jaywilburn/refactoring-ui-skill",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/lottiefiles-motion-design-skill",
+      "folder": "lottiefiles-motion-design-skill",
+      "repo": "LottieFiles/motion-design-skill",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/paldom-icon-designer-skills",
+      "folder": "paldom-icon-designer-skills",
+      "repo": "Paldom/icon-designer-skills",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/skydashnet-material-design-3-ui-skill",
+      "folder": "skydashnet-material-design-3-ui-skill",
+      "repo": "skydashnet/material-design-3-ui-skill",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/solinkz-micro-interactions-skill",
+      "folder": "solinkz-micro-interactions-skill",
+      "repo": "solinkz/micro-interactions-skill",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/superdesigndev-superdesign-skill",
+      "folder": "superdesigndev-superdesign-skill",
+      "repo": "superdesigndev/superdesign-skill",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/woodytest-eng2025-design-skills",
+      "folder": "woodytest-eng2025-design-skills",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT"
+    },
+    {
+      "dir": "_other/yuvrajangadsingh-brand-skills",
+      "folder": "yuvrajangadsingh-brand-skills",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0"
+    }
+  ],
+  "externalSources": [
+    {
+      "dir": "_other/master5d-claude-design-skills",
+      "folder": "master5d-claude-design-skills",
+      "repo": "master5d/claude-design-skills",
+      "license": "none"
+    },
+    {
+      "dir": "_other/simota-design-skills",
+      "folder": "simota-design-skills",
+      "repo": "simota/design-skills",
+      "license": "none"
+    },
+    {
+      "dir": "_other/kubai087-kubai-icons",
+      "folder": "kubai087-kubai-icons",
+      "repo": "kubai087/kubai-icons",
+      "license": "custom"
+    }
+  ],
+  "duplicateCount": 128,
+  "totalBytes": 5161859,
+  "documents": [
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/1win/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "33d539e3ab40e9a507f38f73bad4541ad18c2f4f35be9ae8941d522758e34b5d",
+      "bytes": 24369
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/airbnb/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "8f83ab6a99d512ddbbfdfd33fc6c5e8257336201ebbbfab447f8d38b840d895d",
+      "bytes": 31062
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/airtable/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7b32869de7c2ab3829f9b9defa43032672b17065ea15d099fd71d9eaf71f6368",
+      "bytes": 35820
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/aljazeera/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "e2f077c2dec150402f153640a75d4403182b3bfe3c754550d594def0052301fc",
+      "bytes": 28625
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/apple/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "3557249da1dfed62898fef8847e4f8a970d7c44bde95930b7a23b64170fb7608",
+      "bytes": 37658
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/binance/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "562884b026861862a69079e91eeafbccd5a0afa0fdf0f29a55ca2e698a32583f",
+      "bytes": 40552
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/bmw-m/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "67961d8e1ea2acace102df2053b27946c6e396e8edab01e6fc6a95876272344c",
+      "bytes": 31200
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/bmw/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "177c8ba82a48e831253c507bec0171026aa01123e5c91cd74248d8ffd8dee85a",
+      "bytes": 28451
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/bugatti/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "324ca5c176eead9d36fe793bcf28b43ae11a0b70acc278c9e65432f1964deaa3",
+      "bytes": 28989
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/cal/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "ac36710e4847cf378c868ac6b126cf5bf8f8f706011bfdbcfdb08867b8586096",
+      "bytes": 31718
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/claude/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "64bb619392894ea804b261db7732cb56d0225c9ac63a297807290a4adbb3b194",
+      "bytes": 34175
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/clay/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "bd98d2b1884cf88290c160e3263e24f4180adfdfa812570280dc2384ed2466ce",
+      "bytes": 26246
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/clickhouse/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "4aafbc64048dbdae82db2ff15937c456bd63ff5223795efa13581a6414061a6a",
+      "bytes": 26530
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/cohere/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "cca2fc9a59a893424562569dfed4f22ddeac29911314e078379f6631f77da357",
+      "bytes": 20471
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/coinbase/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "cafa76255876efe759e0bf1d4c339a11e056666f533f13b3fd0f1a84870ed25e",
+      "bytes": 26423
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/composio/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "47e99b1f98c243fce4bff230287b15df9aa87f070587a7d3529ec60a697317ef",
+      "bytes": 21112
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/cursor/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "1a91c81636c7f5d22fe1cbf74f41c1741009688948fe30d00352b4b1d491f686",
+      "bytes": 22308
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/dell-1996/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "3eb7839aa3de340cad5cff643e929aa08d2f7683a7613b07c001725067a583ca",
+      "bytes": 35224
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/dji/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "09305f2fbccbffd250fdc7760b992142cf5b34fbf333904fe664620188ac9ed7",
+      "bytes": 43150
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/elevenlabs/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "d483d3162df6b3891b473c890b51aadb6adee72577c76bded00561f73e0b7c15",
+      "bytes": 21447
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/expo/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "f3660ec8bc207fee491f0fe6cc21573dadb75947f12aba928090d0758391ab6e",
+      "bytes": 22186
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/ferrari/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "05678e98b32ff14b2ba6b50c70a9c3c9ec11d4b1f63de165dfe5a7feed204403",
+      "bytes": 24896
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/figma/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "fd94d345dd976e5c8cf5bb4ce2017cb21c5348f9e69e327403235df0788591fe",
+      "bytes": 32894
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/framer/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "fa54398f20e9f79fd75c227ef9f1a8759223b63ed113eeb3c3fb2f80ccaae0e8",
+      "bytes": 29663
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/hashicorp/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "0d9c700ddb27beb9682ff149cde490ea78e9b012bd63b13e95371e61e8e2681e",
+      "bytes": 28598
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/hp/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "9c47a0d3900942f452f31678df6ac76eb167d45690ca8483857a0391ac555315",
+      "bytes": 37005
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/ibm/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "435881f55ac62cd0adbf9b1f27e78da42d7e6d5b8a4e742626c19a50ff558e3b",
+      "bytes": 27031
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/intercom/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "f466784f0100063342cf3fee4b137351923c02fecb1efe97ef3884eac594fd9b",
+      "bytes": 23824
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/jobright/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "e5b5881d6ee72250ed13790b1043295884a848022ac411b78a79abe87ca40051",
+      "bytes": 27386
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/kraken/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "935b1c8cad0bebe2c357d0004cb58db7b25aad15e6e489cbeb65af8b4f65f1b4",
+      "bytes": 4475
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/lamborghini/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "48ade727a4ffb3d4edf279441426ffc300f47390dcd35ed09be46bc24400d4ad",
+      "bytes": 21407
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/linear.app/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "28dab306d0f7e6be4b3fd95734319b05dfc138809afcbc220caf147e57a07592",
+      "bytes": 24902
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/lovable/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7fb15e14da5086d133fd367ce75ec7353a157978c476a38d8bdf9e934297d366",
+      "bytes": 17682
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/mastercard/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "e748234747dafec0050793eb6776690b3b7571a8c36a8819324829c643aba36c",
+      "bytes": 27360
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/mercury/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "6c75643d30f70102765b9e533dd155e104e543cf4663ed970199b4239757c6f4",
+      "bytes": 25633
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/meta/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "5a7f88cc3a97517f550e39b1b9685fff6d847695ddef3a14ab1e2c96a42d51f1",
+      "bytes": 38669
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/minimax/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "510f797e730a8dc439820bcc2a6080f32e887c8d7ce4d6cc1bb09951aad9457e",
+      "bytes": 38666
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/mintlify/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "87bc025751a4d0d83fb89ee70a140d35d891a4fb7474d5908b97a23d7c8c3e29",
+      "bytes": 44935
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/miro/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7020259dd4344dbd2bf30c70e56996451325d4970bac6a02f5095105a46084ea",
+      "bytes": 37367
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/mistral.ai/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "ce3f0bba49b1f067c0dc9309f85f581de446f66015fc388a4fe38909211ba19c",
+      "bytes": 36281
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/mongodb/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "431a51e8dd0be9e49b88181a8cd04942bf86d598d1fe3b241e6be1220084bd53",
+      "bytes": 32844
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/mydealz/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "dad6819f7d7812153c516f19e6abd7a894009173a25c08e81ed2192dd806079d",
+      "bytes": 26348
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/nerdwallet/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "b9edc88be752b09a7fa278619c3f4ea3c10b176720886b7c98835953dc0e001b",
+      "bytes": 36962
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/nike/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "5e96f340e776ca46d5051df172e8864a7d21480f2f88f6da54f78ec326b2e499",
+      "bytes": 37272
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/nintendo-2001/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "498fde164afb8ccc8211f3b3546c5b4a48566a1493c7babfe561da3e7e396bd3",
+      "bytes": 39626
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/notion/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "c59fb3bf730d13017aa67135c90ace733e914b4af11b69ad4382c05911396f23",
+      "bytes": 35997
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/nvidia/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "019a8832676046d51c5700e576f3eaaff8f1c540f47c9acf19e2e28143bd843d",
+      "bytes": 36231
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/ollama/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "a6f825214e49adbba75fa5be4d130a3c3662142958e7e3990037ece629ce5040",
+      "bytes": 33286
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/opencode.ai/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "faaec3b3467aa495987d426ca5492cc06d56b27a4a5c79304732e9e018f57eec",
+      "bytes": 33168
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/oracle/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "c608db1cbc44c5d6a6409be82340c28fed83863fd3f0a1d4f57327a964ac8938",
+      "bytes": 43303
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/oura/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "55f1499221464ec3d99f3fc772d54d56b72db3a3ffa632279871382f21054b12",
+      "bytes": 32414
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/pinterest/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "fe00554e380e6d004ed94e742c2ad79d7c9bf6c3920295eff6ce6c4cb8e6e132",
+      "bytes": 36989
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/playstation/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "f6217bf5ec7ee2fc0c1194bc167ef46e0b4af3587653cc6fd50da4d360e562aa",
+      "bytes": 40427
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/posthog/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "bdca3f2977c0fe7120f17b0539dec6ce4e83617c823d9a0f7439acca1f0d312d",
+      "bytes": 41188
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/raycast/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "0ff76671bdfa1a18f0cf9d1b1159d96f5eaa772fa8ac837511f2a6296fc85bc3",
+      "bytes": 41944
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/renault/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "d1dfb43d9ee268a113c3047f25c9a844fabdea17aa6dad2d9c9d7125b68445cb",
+      "bytes": 30665
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/replicate/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "1c543fcf279a197cc42cb8baaa48fed33129a7a0b1470f59f8ee2de59540acc1",
+      "bytes": 32111
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/resend/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7e3db0fba54006e97ef2cb828eac6df22df0a804a45992c102584ef366b83d1a",
+      "bytes": 32046
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/revolut/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "83612891b690e4f50ebfd291ad608d085c97c5d18bc379abc84c12676b4b50d0",
+      "bytes": 32670
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/runwayml/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "a3129955facd3b77b7acac6fe9a8ded6cda6c4b58b6229c5fc7cb23527651370",
+      "bytes": 14597
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/sanity/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "56d6de7be296286a8d3ff4e2325e713fcba4439fd60f432a689c6d7387744040",
+      "bytes": 21588
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/sap/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "c53bee0a4c18633fa323ab6486c5e1fcb125666538b5377831b34beff1d2c3fd",
+      "bytes": 34254
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/sentry/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "236737d73ea8319402b67aacc2eaad0eccce863c5f14a852193fd923ee4392cc",
+      "bytes": 35995
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/shopify/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "6ffd39973d44ec9ce6496b7c057b635f86a35b918be3c25d4b54738623c5c7a4",
+      "bytes": 27583
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/slack/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "ba4b0ec9b2816043ce840b76d3cdd61967bbc6561101cc901bf67def3d4b9e2f",
+      "bytes": 25011
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/spacex/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "130cad7b7c858137e4bbcf3d0649cb06bbddfd954a9ad647eda67ab547a732fa",
+      "bytes": 20042
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/spotify/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "70b9f126c31b49002a043a0b92b39289e3c4ef79a28c6f64cb5eace3b4af200b",
+      "bytes": 13201
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/starbucks/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "945ec3083aec2c710c70d5c8b3db68b0ceb6dc4e5e80887a70de25e697b45280",
+      "bytes": 37909
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/stripe/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "bfa168997e37c23571aeaeb8ace2deb4ff19c5d84c6b28897d0d976292556039",
+      "bytes": 25093
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/supabase/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "839169dbecd652e1b747e75349fd2dbd8883af7f9118e8c0ba5b183b9e157a48",
+      "bytes": 21777
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/superhuman/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "89f4ce01718f7b4f674b1cb6f57352a74455479889b67647be2ff2c473fa1805",
+      "bytes": 22325
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/tesla/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "5f70acb060ddaa778a1e70eb6e787684e272dc6a84072e1a6bdedb949e32e4b0",
+      "bytes": 22498
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/theverge/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "57c657b4e05d32887c17e14af36ef3b0a36323d239e382a8f5749bc5f1df2330",
+      "bytes": 28707
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/together.ai/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "773b1a5105717540afbe318a626de5bbb6225424ceac4fcc0888936f633d5005",
+      "bytes": 38976
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/uber/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "251ea40ead2d37007cbf0f53d08d3aeb46c56d6e786a8ef1f801765eb665ee6a",
+      "bytes": 35396
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/vercel/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "90490a5f921964e18175cdad895b355ee55b0346806182e4ef44e31ac9eb9f14",
+      "bytes": 42141
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/vodafone/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "0f5a1811b2fdbeae8920f88365b719460995d4264151417a643055ecb5ef7b41",
+      "bytes": 28644
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/voltagent/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "59f2785632f26fbd0ab1cbaf3f84adb99e94b0c94c66d355b072fdaa1499d99e",
+      "bytes": 26436
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/warp/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "44aee091e778aa3bba5c3cf6feaf1ae75d4cf38b5ee1791536f513a92c93dbf9",
+      "bytes": 24964
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/webflow/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "5999263b6a568bb776cc4c7916ba6fd585c4d994070e95c606b1bc77888910f7",
+      "bytes": 28767
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/wired/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "31515abe6c3763b2019e0b6630c4a28e79f54e9f6191c60c1101c5805ad67014",
+      "bytes": 24158
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/wise/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "dfa523b684c37c3b554cd3942d4f0635abb910991c243aef79ec71cb58151a9f",
+      "bytes": 25130
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/x.ai/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7c37009677828bb86685d634d1d7e3a554846c8765b3a3cfef57a483bd6d1438",
+      "bytes": 22246
+    },
+    {
+      "path": "data/voltagent-awesome-design-md/design-md/zapier/DESIGN.md",
+      "repo": "VoltAgent/awesome-design-md",
+      "license": "MIT",
+      "sha256": "8970cac5635585f8ad339ed0ebe7690221081aade7af56231fe148b4baa8fda2",
+      "bytes": 23532
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/SKILL.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "dc817b01d82126a00867eb290c730d07490f8c3568cbc77586e6097a35aa5aa9",
+      "bytes": 32735
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/01-dieter-rams-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "288f00322774f06de55b23105197853961680bca08d16c886dd66a388f3f03c8",
+      "bytes": 4576
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/02-massimo-vignelli-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "940f7c1cb915b59d81d3a91eea246d4233286a6a4f56605bf645f6b036591d51",
+      "bytes": 4146
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/03-paul-rand-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "741c663001d0e04bbdfd862957cc3436356ab9abf5a3f74045617f185f0eebc7",
+      "bytes": 4004
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/04-saul-bass-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "4b8aeb978c1f9b002dfde270be4178971653e7e977330dc04eb1cb8382a99ba2",
+      "bytes": 4019
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/05-josef-muller-brockmann-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "2439c6ef3e6392de00fc9bc9ec87c679b7506aec82a37930a1e9cd86c37a47a4",
+      "bytes": 4078
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/06-armin-hofmann-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "864965aec3f68fdcb47f46cd4caad6509ca8ed4eb0948142e62e69a51aba2c0d",
+      "bytes": 3967
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/07-otl-aicher-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "ac7e45d90d063ec7f29db32d182da8209ae3dc56d6de6c93af4c978310840eb2",
+      "bytes": 3980
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/08-laszlo-moholy-nagy-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "7bf34051964be6eeb37e4d85c4a342271be4ce22ad4d9447c0124bbb244e3fdd",
+      "bytes": 4005
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/09-charles-ray-eames-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "b0895ca297dbe95aa4badd6e7ad874778eab0205cc14a0a93b22fabd9922cc45",
+      "bytes": 4133
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/10-raymond-loewy-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "b419ff5f4d488a8bf8dc8b9d5ea27b16ed5043511b41a8407d068c660b9f41d7",
+      "bytes": 4060
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/11-ettore-sottsass-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "b713d9e8ab767be29629edd8cc981ff9e11549ad2c871517538f4fafcbb5d679",
+      "bytes": 4124
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/12-milton-glaser-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "ea53461dcbe7da7917b7b76fee4e35f38811c39042a05024ddaa02656ccf17af",
+      "bytes": 4001
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/13-ikko-tanaka-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "1e261391e83d0ab26695775796a86950d6b536e8081636c6375df95c764a1290",
+      "bytes": 4084
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/14-shigeo-fukuda-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "67df37f84304a01005fcc2756595d55b93d35cf6d56191eff66e7ed29fb4093b",
+      "bytes": 3820
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/15-kenya-hara-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "4d93347fc397f251d7568f773e565e1d923857b7008aed92a24faa652f41b02d",
+      "bytes": 4032
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/16-paula-scher-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "0e3fb62176407da09765f464b47655bcdbd684eb81b14864aa78709433f4f1f5",
+      "bytes": 3889
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/17-david-carson-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "7595f3200054a53625afdc9486172732064394187d5a6eba9ea78dfbd254177d",
+      "bytes": 4134
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/18-neville-brody-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "e403837dd3d552f7db950e98772ecebdd869f4352cf5202cbe924f764c748305",
+      "bytes": 4002
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/19-susan-kare-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "8ed8685d6556973815d5f085e35cea903eec0d972cbb4e4bfbaf66e15f8e679c",
+      "bytes": 4006
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/masters/20-april-greiman-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "22b3e05947ec6c02a0023566e92185115e4618aa24c073842fc5fec7a2a658c7",
+      "bytes": 4072
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/01-glassmorphism-dark-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "615c34355ec49fa7b0af6854241fbe576307e5e9fc8ce6067359b6a0b03658c9",
+      "bytes": 15830
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/02-tech-minimal-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "9112b1816e1def1ab9136bd98d29c45fcea502ebeabbe0e438257cbc30c7b3a2",
+      "bytes": 15647
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/03-aurora-ui-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "cacbc0e9bd86b1430dc98304d372b2ddcf7306195f56c3c836fe779bef23ff0d",
+      "bytes": 15693
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/04-neobrutalism-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "b9905971da606559c29d26a68ac6e53419343eb3e634270819afcf75dd00b1ae",
+      "bytes": 14072
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/05-fintech-clean-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "d9887e639be53a57fd385b0045c8d1216084b8865c53f3be1f4f4ca8596eaa9a",
+      "bytes": 16445
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/06-ecommerce-energetic-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "9060fa363aa437506bc357e5ab2cc560ecb5f3e56a6cb28fb2d42b20c0f80795",
+      "bytes": 12190
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/07-luxury-premium-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "eb8eaf6d16c1d697bdfd0694089e19470f4c470f03e961c351bf662d5e40f6c4",
+      "bytes": 14045
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/08-corporate-blue-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "8c27214e4a5908d03e7d363c90cef9f54124a96ae35bedda8303b310eb3fb3ef",
+      "bytes": 11281
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/09-saas-dashboard-light-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "2a80f19e752f3194338b83473c21fb8baf7a42f0352785d2312100c9e068032d",
+      "bytes": 13701
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/10-dark-analytics-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "94fd591739c2aad23c89ddb673c906ff5904bd0dd209fd7aed97bf0c9c0b9853",
+      "bytes": 12602
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/11-japandi-minimal-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "a65b12e736de22986993e22d5e7561ed4693aaee410f2b3a8d04e80fd6a4dca2",
+      "bytes": 10149
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/12-ai-native-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "2121bb282f9174990cc86c2066e6ad9e601d942be1ffb463135d2a75ae20ac49",
+      "bytes": 6370
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/13-health-wellness-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "031103f7ec1373960834e3986ac656de25402bcf89120875e75dbde3f9b30d0b",
+      "bytes": 7068
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/14-bauhaus-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "292189abb679abb520b6d86e55124077ed6b1fca2fc9de0205290bd80468e858",
+      "bytes": 8729
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/15-art-deco-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "49cc5d38137d3ed869eea8e7b6a690f447175183a417e7cd3b8a99e1c900d802",
+      "bytes": 9968
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/16-synthwave-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "1b1600469387e8c0946ac9cb8cbc903d68d04e95cf323a3a75b7ed10edf98b7e",
+      "bytes": 8195
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/17-cyberpunk-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "f0b9362bae0f691a09c213d0a3e5a90cd819a9302933ee082b63c7fa6fbcad3b",
+      "bytes": 8280
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/18-y2k-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "b58fb513e0934a1861461e74873ad90f7d1447761d5501f1caced9809fdbfc4f",
+      "bytes": 7823
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/19-vaporwave-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "390e864476bf868813d651f4b2a5e5d021cb3e4221ecdef8440229d945195cae",
+      "bytes": 6837
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/20-new-chinese-trendy-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "5edf8d09d041dd886c390438aa5ec50bbde6e42cc92048679b940c551c76b54e",
+      "bytes": 8890
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/21-editorial-magazine-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "400e317d5acac1e866b0f76851e98e44f1b60a20c27466dda3693be824581488",
+      "bytes": 8415
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/22-academic-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "d83349ed60214d800f81e0622e817efc2afd1eccc387b03c4f942f929c45293c",
+      "bytes": 8608
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/23-startup-pitch-dark-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "053eb0ea8f9809dbdbe601a569c8f90ca4c85ba7c9e162e6f524d4b14e698837",
+      "bytes": 8197
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/24-swiss-international-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "bcd873b0224bc86c5c7c7d14110a9bde0cc16f2a5aedcbca278f1a3747169f3a",
+      "bytes": 8979
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/25-nature-organic-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "06ce33be4922dc7cc6154c6c30a9f9967d51a4985fc0db41e04bb979d2510c6d",
+      "bytes": 10383
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/26-kawaii-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "6f64af75acb9250a4c01416136d43073f2f602abd17c5615ccc9f8fc34821e5a",
+      "bytes": 7777
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/27-claymorphism-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "9610dc7a6e3ae28e280ec606e14d3e68bf4047b27e4470ca7b352b38115d9c93",
+      "bytes": 7829
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/28-pixel-art-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "00138929f633bce6a716aa99474eaf4963a531c1cb53ceb43ca87e791dd3612f",
+      "bytes": 7374
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/29-material-you-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "cb93013b24ccc8a82b27e0160cdb72acd679e453cd726ecdfca47db86a6eae27",
+      "bytes": 9551
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/30-dark-developer-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "ccd3b78a4cb88bae0416835d2637387b8481b73e8ead5471f5d462364029cd7b",
+      "bytes": 11466
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/31-song-dynasty-ink-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "3ab268b2713ec2b483131a7a855bae6d72617d6aba9be6c175573e2b4d499b29",
+      "bytes": 13067
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/32-tang-dynasty-splendor-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "1fa2758597328b0ab8a0fae21124ad87796b36206e86469a21edc2cc710803e9",
+      "bytes": 8400
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/33-republican-shanghai-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "ea36e043ed8e5418d2302a0841c3b08590cccb50fae5a09c1f075c417c52575b",
+      "bytes": 8384
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/34-ukiyo-e-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "04e8fd5debdf0499a55d377cc17fec4f29db87b5889e8141f20e3b186a2d45bf",
+      "bytes": 8181
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/35-zen-wabi-sabi-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "cbefab87e906ab3fb50390f670a07c83066017147e7aef919aa9c0fcc3254aa6",
+      "bytes": 9556
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/36-medical-healthcare-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "9f7fddf786e0021c60e7c76623406667cc173112a84a90eaba0fe40e578149a3",
+      "bytes": 10548
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/37-legal-professional-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "d947733bac67248af3f5f9e9ff227bcde727b176b6031433336c427146d7290a",
+      "bytes": 9992
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/38-education-platform-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "2bf8b2138c5b81851484212ef39a461ec0574e3b7a5ccd9b55d12f9d946b8883",
+      "bytes": 10337
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/39-real-estate-luxury-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "9872bc9080bc28219765b35a36a38d0a403cc45f93d983c4080771e26fd5c8fa",
+      "bytes": 9448
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/40-restaurant-fine-dining-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "0cb6dd56853bc5cc8c81d462db9f167f73aa813aa787830847af82bab3db7019",
+      "bytes": 8846
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/41-finance-enterprise-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "0eca521a9c4c22f1abe7a0200342368657287a950f08dfa92ca71443c6ca71c1",
+      "bytes": 9410
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/42-esports-gaming-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "055968a46dda52a85ce41d5d56b5ece5c7f05b2c8417720406a979f83df3d224",
+      "bytes": 9595
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/43-fashion-editorial-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "99e0840d13f035cd6e500cd34ce738a4f38463a7bf7a690c6e52baf4c78a6a50",
+      "bytes": 8592
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/44-travel-hospitality-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "a9f75e786fa5e2e51440126a299125a3700a2d52806ffda3232cf0dc9cea6e0a",
+      "bytes": 9662
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/45-nonprofit-cause-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "9daf432e276b313d080cd72467f2b0f5b7e67582f757950adb5c1762428ca0cf",
+      "bytes": 9670
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/46-islamic-geometric-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "c0bbc58ef5bf816c49787574bab1efb3bfb94770f0f8a833c6c5182032ed9dc2",
+      "bytes": 9342
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/47-afrofuturism-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "7156dea7ec707adaf32325e254047167264333195f7e48d43efa006cdf5a260d",
+      "bytes": 8632
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/48-pop-art-60s-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "010b9ed388e5ae05a82e4a9285beeec5e2a985fd60d6bbd54c130d9710478a20",
+      "bytes": 8531
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/49-dark-academia-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "d4639d5c21edcbdc3d65c75509a200d5608ca3e4f6c886bac6a41b99798c1378",
+      "bytes": 9231
+    },
+    {
+      "path": "data/xdx888999-xdx-lab-design-skill/references/styles/50-brutalist-web-DESIGN.md",
+      "repo": "xdx888999/xdx-lab-design-skill",
+      "license": "MIT",
+      "sha256": "661cb6c35c3f73219abb78f2c6ec841b8cc84208d45bc52f40c8401c0028139a",
+      "bytes": 9158
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/airbnb/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "4871f58a9ab65246d4e4a03301d3b84f3f10ffa135e600fab58cb00507fc9af3",
+      "bytes": 14297
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/airtable/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "81304d60dc3c9ec21db23bd0b922be04bb5bde810e26ccfc67a08ef3b75d4874",
+      "bytes": 3648
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/apple/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "9f33c665927ecb8af1cc5dfdb1ffb0c467c3167fd07f426169b6f119ae9d432c",
+      "bytes": 20731
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/bmw/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "4b7ff8b30afe321e33b961dc2a98065308283800a1bfc40188884a07a20aa6af",
+      "bytes": 9992
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/cal/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "c590c450775dde51c51e90eab2421d4894c171e749027198048b81b9d67b636b",
+      "bytes": 18060
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/claude/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "8bdcfd9361dcfe67ae960494cd4496f0c146e7646a28182f502cadf3fc028103",
+      "bytes": 20608
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/clay/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "41b9c0205774157961b16fbb80241a806d937c38393de97d5c6ecc5e846c040d",
+      "bytes": 17636
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/clickhouse/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7e65a22627b8101050f7c2aff4f321870927087261a7f180a7fb5557c6a64156",
+      "bytes": 15675
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/cohere/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "e9cd311883f5d96a35a7a85e19314cd52d4028215c77ff9091c101f6e70e66ad",
+      "bytes": 15023
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/coinbase/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "917a3f27f8f9b30e87d1129c170b8259bee9a241f78365d9e39437195152d0f0",
+      "bytes": 5137
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/composio/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7dc1611322799d0ef592d128c72388bc6d8b2481f71e86155c6df5a8b66ef84d",
+      "bytes": 21221
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/cursor/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "9f282682e2d0c6b709e89087d2a6176b71c5f1e95971ae69acb90ade1b539487",
+      "bytes": 19390
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/elevenlabs/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7047f95c266a126481b2e1aa90c0177d0e28c531217bf229c48c16c5f5eeae55",
+      "bytes": 15457
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/expo/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "14b578263d9ada1b7a11a3fb145b54786ce5570e772e511721e3e35570dddd9f",
+      "bytes": 18961
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/ferrari/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "c5b13ab3000a83db0e1a58d24cd900448a60f0633143bc2ce66cae3965ec671d",
+      "bytes": 25804
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/figma/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "375e47913d97ec0862741da6434675760ada1cf0ee7b18ae7861cf949537f3cc",
+      "bytes": 11837
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/framer/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "2a5776929bbe3e7bf6147d50f7349a66b9029266162b14e7c2d19b02369e2e6a",
+      "bytes": 17816
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/hashicorp/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "43c018e979c80af99ff8446d6449b3c92e94f80160b5435a309ea229d28d6913",
+      "bytes": 15917
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/ibm/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "c6d5388139d5f89414672e05266aa124dab7a643cdbd7e6bbdd6c66de936f02a",
+      "bytes": 19887
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/intercom/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "72c04206cae3ed06360c1ae87d3be27fac042e564aa67bb4f79c7af5e9ddbbec",
+      "bytes": 6567
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/kraken/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "89c41209455071df5325e66951106348a3c9a42e7ef6b82ced0a566b40ee1bf4",
+      "bytes": 4478
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/lamborghini/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "d1dc4b554155411964120e936fac3455e5871800655c110a5b0a76ba1bc7b875",
+      "bytes": 21410
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/linear.app/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "28ad38fd44ef2dcf184b01367a8f818ce9d968ca10959858731f600935dd0683",
+      "bytes": 22816
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/lovable/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "739bd28bba2e55f2fbf90a464341574fbd304395a89ea75f6b6d78c1688a4876",
+      "bytes": 17685
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/minimax/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7aeae78fb0462feb1ee6bd9a6b5411eeacb277b30a2d98516e700dcd507e2279",
+      "bytes": 14542
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/mintlify/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "684a0b858aff74c88bb1d287b45292def153d7a0237ebb2416cc111258f5a315",
+      "bytes": 17755
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/miro/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "44ed8e1980390082098190cd49df666819c3b69ead43c16de563c1215d782de7",
+      "bytes": 4905
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/mistral.ai/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "4554e33d6b66a4113c72547e6f363dcc3c1e7a71899b98ced8acb5d7a01fbaa1",
+      "bytes": 15896
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/mongodb/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "87e5c29e93dcbe5497b1bb99742c0c8f103c9df170a78865d0680135797eae03",
+      "bytes": 15281
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/notion/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "9b781254abde369ad86c4cd9e77b3c06341d3b838452de00dbdb344b4dc73a1d",
+      "bytes": 18658
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/nvidia/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "2cdee015e1101465b9198cacbe264a369ce927fe34ca4109f16bdcb822b8da79",
+      "bytes": 17386
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/ollama/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "c6ba277a59a7a9623cc93c1c11815408f7ead664bcdcc610e08381944c0c7986",
+      "bytes": 15788
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/opencode.ai/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "0f18eeb63c962ec8e7eef52f22ee8bc47c2695ac13d34f760c37d4eafb9cff6a",
+      "bytes": 15810
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/pinterest/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "138115f455959041aceffe4913ee1664385d501e8ed4819f812cdce6fa67f67f",
+      "bytes": 12151
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/posthog/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "c89c794bc3a593864fccb7923f3ba914536170bbf19b0ffdfd6383ed325561df",
+      "bytes": 18817
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/raycast/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "563be407343dec08ede6dcfcfeb263da7e6057c30388f055d367a189abc37e2a",
+      "bytes": 18755
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/renault/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "0a8cdbab0d2defa4ada62276fd2a75bb80bc61587b40eae9ed68d4c4bae69669",
+      "bytes": 24608
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/replicate/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "00e3d506ac52df301d82bc49628f8cc55fde14341c940d75220ce71fc0972dd1",
+      "bytes": 14422
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/resend/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "49b9734118908af35e2d877350da9fb0f9e6c49ec006cbfacc8832a2d3d14baf",
+      "bytes": 18734
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/revolut/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "9f5194ad83bc80e0d60d9a9a454f1b41608291137bc745b108847e6e97f2e75a",
+      "bytes": 8807
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/runwayml/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "2f152dd4fdbdd7414e040cc362cb660fe82985d6961aa64d0aa8d46458cf3701",
+      "bytes": 14600
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/sanity/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "3b95b94454ce76bf78a48637075986e4107fd8ee4cf0988f2f588bb5a2c126f3",
+      "bytes": 21591
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/sentry/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "68b9adcc295f89a34026d3d43c4fca28075fbc0d24d037a2351ca8c5ceb9c92c",
+      "bytes": 15015
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/spacex/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "a17aecceba5b8bb4c3011e7b8312c0a821d69af43578064c68dc4eed0906a18a",
+      "bytes": 11517
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/spotify/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "5d12f23ecd8401026a4527c82b6dcf15dca1d55243d232c0ebab94a40f18db69",
+      "bytes": 13204
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/stripe/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "d9fc0a885ecae429246d9518e933d7f04b785f777c83fa2a9b0ce174fe267820",
+      "bytes": 20772
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/supabase/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "e297cad20c6675fa1a9e17314cdb609f39c26341a6bae80c4a0d84170b2d045b",
+      "bytes": 15058
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/superhuman/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "186dadb0f5de8c0404b7016b57a457851010ce661389375e742cf2503a248587",
+      "bytes": 19180
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/tesla/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "aec493c478d9451d1b950726c2dace12abfd05c28f70bf022035fa06920bfeda",
+      "bytes": 22501
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/together.ai/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "96f1be502b5b9e4a1a90fd75c61b286e62a03e578137f5a1afca270edc5f2b77",
+      "bytes": 14550
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/uber/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "89ab28254bc8d82cc88dfccb5d2f440ee3ca2e2b7aa7729eeb98a774ee0cc90a",
+      "bytes": 18952
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/vercel/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "3b90ed156abba7308146189035c3faab2a40757ff9110e9b20efa64599723a88",
+      "bytes": 19767
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/voltagent/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "e6b5c849b2358ebb3bd8c9d07613d108ed50091196cd134f96c8ef0aad37987c",
+      "bytes": 26646
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/warp/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "0b719ad92c1034dadf44a85d37eeae922db6fdd708f4c8cc4e2d5a122e1c4129",
+      "bytes": 16924
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/webflow/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "dde7d57a2a0e2681913c9494955f809303da7fbc1c0a36c997839d68ffba0909",
+      "bytes": 4214
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/wise/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "a7c1bcacedf59a8a1b801256b30b8adc9d221836d98dbd7e92ea6fde74a94429",
+      "bytes": 8640
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/x.ai/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "7128e48b1b2fecd6aa4bab4a14783a6d3e9ff0a893ab6583055129946c1d15ba",
+      "bytes": 16542
+    },
+    {
+      "path": "data/rahulholkar16-awesome-design-md/_recovered/DESIGN-md-snapshot-2026-04-08/design-md/zapier/DESIGN.md",
+      "repo": "rahulholkar16/awesome-design-md",
+      "license": "MIT",
+      "sha256": "6812dfe821774f6306da92a5ed0dc9da67acc3d2584bdf0268b86cfaad6e9a01",
+      "bytes": 19071
+    },
+    {
+      "path": "data/abhayjnayakk-awesome-design-md/examples/ai-devtool/DESIGN.md",
+      "repo": "abhayjnayakk/awesome-design-md",
+      "license": "MIT",
+      "sha256": "01fcda3ee1ea2905665db086dacacaa9c1d05edbf9c42822ed7d5969e6c30db2",
+      "bytes": 3111
+    },
+    {
+      "path": "data/abhayjnayakk-awesome-design-md/examples/creator-commerce/DESIGN.md",
+      "repo": "abhayjnayakk/awesome-design-md",
+      "license": "MIT",
+      "sha256": "aebd249f7530e5bd57450b98525fda63aeaddaa7ec671d9fb76ff0161b636b38",
+      "bytes": 2925
+    },
+    {
+      "path": "data/abhayjnayakk-awesome-design-md/examples/editorial-saas/DESIGN.md",
+      "repo": "abhayjnayakk/awesome-design-md",
+      "license": "MIT",
+      "sha256": "0033a9ff949fa4efc869d34da962564788ad80a296e3909e8ccd68fa3e608135",
+      "bytes": 2950
+    },
+    {
+      "path": "data/abhayjnayakk-awesome-design-md/upstream/voltagent-awesome-design-md/design-md/spacex/DESIGN.md",
+      "repo": "abhayjnayakk/awesome-design-md",
+      "license": "MIT",
+      "sha256": "9e6ee878ba428bfe54041d5a46434d5d9c34bd41d6a2bc40b6e7e06b18f05f39",
+      "bytes": 20043
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/SKILL.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "b436b0005f5dfc827b42913350304857054aa6dae4cfd72fed21452fe03a683e",
+      "bytes": 38935
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Air/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "92cf5af4f5f7d6b8f32b3e9aafb445c2914ec42f9c137cf02fdd215df6230a60",
+      "bytes": 16695
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Anthropic/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "9b260bcba8ed4effe5d1f5396c858ca129c6c449175524a5ab4e14488936963f",
+      "bytes": 19503
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Caldera/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "5a53c4da80985c8f337fb0edb6554071d7a949fc9c7ccd7b22edd6d95a6caa6b",
+      "bytes": 21169
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Composer/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "8636f7eeac60b7622efb318db31308d31f1560b128dcfce36371076f26027bfa",
+      "bytes": 25809
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Discover/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "d1c0d67a1bb6f6615313c387a8cb718973f3bccca6f06f7b1a85ee8b60886e9c",
+      "bytes": 16662
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/FRANKY'S/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "2a23369e1b77277fb14fc5ff46f8991d4a337dd06c01fceec9700420f9e6bd61",
+      "bytes": 16003
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Flying Papers/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "c7c9a1c37e6a3a8a97a621b0a03a5e13d4459c932c98a044082e42df74981bf2",
+      "bytes": 21087
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/General Intelligence Company/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "2667dabdacda3f8929c461895c621aec81185310ff8cb218d3ea84c1afc86aa9",
+      "bytes": 21881
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Good Glyphs/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "ab844b05009b6e3a32348d8188c370b8198a1cdf023f063d2a804081b609aa24",
+      "bytes": 15063
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Henry/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "a2987dacdcf35daca7b6e72e6fc47066562300837bbe2b68f85bd20968f3081c",
+      "bytes": 20419
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Huddle/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "50aa37d01e655185733efde65b74f7f08eec087ad3e54c6c7887b5dde5dcfbfb",
+      "bytes": 24306
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Hyer Aviation/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "a8e67221c69701548df1d3ef617819cb213a6ef6642ad674ecf0df68e1062d2e",
+      "bytes": 19141
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/IKEA/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "ab7104647112a1c6418bc33d522b6467b156cca7e03e4b754df5d24f2085a99b",
+      "bytes": 16631
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Lamanna/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "33ee3b48234193ce0cf4697965b2b327a71f29837a4f2afb799965f3eae6c63a",
+      "bytes": 18115
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Leandra-isler/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "347cf4495c6ae367383f42606cb3da2258ef99e508f96aa12c06ff3bfeb6bbd7",
+      "bytes": 19322
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Lpalo/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "b01a7a797ff8321f2af20936a44844c9eb4f9c606dea71941e43f36cb87984b9",
+      "bytes": 20394
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Mercury/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "b81fe4579aaba932d98edff431b7e929450fecbe5f743bc197533495079b81dd",
+      "bytes": 20470
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Monad/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "8502c4164d7da2051ce9c3337cd53294cf85afe085089fbac6acb3992f0b8efa",
+      "bytes": 22587
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/MotherDuck/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "9334bf091e32653cce0d4b8ff987c9968ff845a79146ffe367c1793d07d16b92",
+      "bytes": 25316
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/ORYZO AI/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "b41ac9011ca7332b433c5fb9ad6ebe28e8cd29dda151d127e12427ea8dbba223",
+      "bytes": 20942
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Patch/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "275accd28403d1c1c8390499fb63241a773c942e634243d9646033a5c8cbbb93",
+      "bytes": 18992
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Raycast/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "556256e2d7e463506a37bf08f53a3ad9c62e73e037e32dbf4f2aa96f6a2db465",
+      "bytes": 31451
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Seline Analytics/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "61a68031e9f8f2b3de501eed1f7f7d29705ce0b13e5b5477aa62e1cf52c70a57",
+      "bytes": 20806
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Steep/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "a3e2831f9417fe9d1f96c716c3887e69b737f2a20db5f1003dbaea732abb01de",
+      "bytes": 22382
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/SuperHi Plus/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "b5e77267ea505352e12d1df64dd516c8bcf0cc1372c4ed1b01eeef3efb880c62",
+      "bytes": 17803
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Superr/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "e4645e22191826241ed1983c706435fcd0c50d39dabf12ecfb12375a5697cdad",
+      "bytes": 20793
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Syllabus/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "f4a868511f936d5c036a0f0a37dbbb634c67db9f0d380469b77d9ad9ac12ae63",
+      "bytes": 18646
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Ventriloc/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "666aae1a922e4b1760a1505fe33b576efe27660d4df392aa58f558180fbdb169",
+      "bytes": 18315
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/Wispr Flow/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "4bd543d81a7cedecf300b1c4889bae4fd3e4bbda144093462ce370636351042e",
+      "bytes": 21840
+    },
+    {
+      "path": "data/changemaner-design-taste-frontend/refero-styles/monopo saigon/DESIGN.md",
+      "repo": "changemaner/design-taste-frontend",
+      "license": "MIT",
+      "sha256": "6f8efaa45bbb40168e84f55ddd94ac27363897ac084b7dc41c2e653885e699f0",
+      "bytes": 22187
+    },
+    {
+      "path": "data/cozythecoder-frontend-design-md/DESIGN.md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT",
+      "sha256": "2f90d42c032a38407e7306b74bcd8777e8d7ede5122aba98c0a85857ae697e6d",
+      "bytes": 24787
+    },
+    {
+      "path": "data/cozythecoder-frontend-design-md/SKILL.md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT",
+      "sha256": "0f90d6b8299fbc025a3d57dbf09e37c1e6fd019e9018da471798890164021f94",
+      "bytes": 1615
+    },
+    {
+      "path": "data/cozythecoder-frontend-design-md/design-systems/stitch/DESIGN.md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT",
+      "sha256": "cd8b301162c58e21b7fc8e81df344d5fe5c2c473ab26ec6641a9fcd1b97402bb",
+      "bytes": 12341
+    },
+    {
+      "path": "data/cozythecoder-frontend-design-md/plugins/openchart/skills/openchart/SKILL.md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT",
+      "sha256": "358544b9edce8b45ab7908a4869f129411793150b8214b96cde4cee54491580e",
+      "bytes": 6891
+    },
+    {
+      "path": "data/cozythecoder-frontend-design-md/plugins/opendata/skills/opendata-api/SKILL.md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT",
+      "sha256": "fa1071371ec3bd6ff8fd178b1d04e97a245842d690b8d82b474969eabe9f7df2",
+      "bytes": 11533
+    },
+    {
+      "path": "data/cozythecoder-frontend-design-md/plugins/opendesign/skills/svg-design/SKILL.md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT",
+      "sha256": "0af6fdc43faea0cd9c9e1af00c49f2d8cb3acbe2a9f62264757bbe1f3d1b476d",
+      "bytes": 5418
+    },
+    {
+      "path": "data/cozythecoder-frontend-design-md/skills/design-systems/SKILL.md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT",
+      "sha256": "722098f13453c4b680a290613c585a907f300d3503d336f06a643e6625488011",
+      "bytes": 10527
+    },
+    {
+      "path": "data/cozythecoder-frontend-design-md/skills/epic-design/SKILL.md",
+      "repo": "Cozythecoder/frontend-design-md",
+      "license": "MIT",
+      "sha256": "5da3d4e3616923441ecbbf48cd231473ef4e045ccc37c9d8ee57a049e976446f",
+      "bytes": 7870
+    },
+    {
+      "path": "data/davidgarciagordo-design-review/SKILL.md",
+      "repo": "davidgarciagordo/design-review",
+      "license": "MIT",
+      "sha256": "69f71af442a614d6b15a89d20fe7f64119a3ce5ebca8cba2394c0540f1e37797",
+      "bytes": 21919
+    },
+    {
+      "path": "data/davidgarciagordo-design-review/references/skills/huashu-design.md",
+      "repo": "davidgarciagordo/design-review",
+      "license": "MIT",
+      "sha256": "9330e142e8c9b9cf5da48cf84516cecf138da90f9a2b7cbaa777452dfbd8ac06",
+      "bytes": 4366
+    },
+    {
+      "path": "data/donkeyking01-tasteful-ui-skill/tasteful-ui/SKILL.md",
+      "repo": "DonkeyKing01/tasteful-ui-skill",
+      "license": "MIT",
+      "sha256": "fba9f00e44acb67fc716468c19233fa578b491b195aa4d5ec924f25eb5ba3c46",
+      "bytes": 8276
+    },
+    {
+      "path": "data/jaywilburn-refactoring-ui-skill/skills/refactoring-ui/SKILL.md",
+      "repo": "jaywilburn/refactoring-ui-skill",
+      "license": "MIT",
+      "sha256": "332f9c0ec90cc1273a6888062e3c746db5d3a0c70345130031a976ad5ee49f6f",
+      "bytes": 50128
+    },
+    {
+      "path": "data/lottiefiles-motion-design-skill/skills/motion-design/SKILL.md",
+      "repo": "LottieFiles/motion-design-skill",
+      "license": "MIT",
+      "sha256": "0fa7bd378776e776a9af528db040e5144127834c461ba7fb6805f47d13bc293d",
+      "bytes": 12895
+    },
+    {
+      "path": "data/paldom-icon-designer-skills/.claude/skills/add-skill/SKILL.md",
+      "repo": "Paldom/icon-designer-skills",
+      "license": "MIT",
+      "sha256": "9e5aee35f6f47fa7db1909eb9bdf8d61d7bf16c0e5fb8e2a6fa8ee673c4e927d",
+      "bytes": 5918
+    },
+    {
+      "path": "data/paldom-icon-designer-skills/.claude/skills/publish-repo/SKILL.md",
+      "repo": "Paldom/icon-designer-skills",
+      "license": "MIT",
+      "sha256": "a42b3e6e8767019ca19919c3e63eb6a413091b378b2150717dbc3858952510b6",
+      "bytes": 7787
+    },
+    {
+      "path": "data/paldom-icon-designer-skills/skills/icon-brief/SKILL.md",
+      "repo": "Paldom/icon-designer-skills",
+      "license": "MIT",
+      "sha256": "2eaf5dde136f6fdba59a03f13f209b7c25a42497d2a8b3e7cb150a9239e8f3bf",
+      "bytes": 6900
+    },
+    {
+      "path": "data/paldom-icon-designer-skills/skills/icon-critique/SKILL.md",
+      "repo": "Paldom/icon-designer-skills",
+      "license": "MIT",
+      "sha256": "70029645a28577568b36e93cb721a2b85b949a6ae66d187fea519b7ad4d49da6",
+      "bytes": 6196
+    },
+    {
+      "path": "data/paldom-icon-designer-skills/skills/icon-draw/SKILL.md",
+      "repo": "Paldom/icon-designer-skills",
+      "license": "MIT",
+      "sha256": "2de2f526716d8aa8d74ad16e18c516ad984141ebfec0b47730233e732f7b920e",
+      "bytes": 7977
+    },
+    {
+      "path": "data/paldom-icon-designer-skills/skills/icon-export/SKILL.md",
+      "repo": "Paldom/icon-designer-skills",
+      "license": "MIT",
+      "sha256": "59b5585f1416ab2f79f0d3cefca2e1444ab2474f741ea3861f9b2c21358d3947",
+      "bytes": 5473
+    },
+    {
+      "path": "data/skydashnet-material-design-3-ui-skill/SKILL.md",
+      "repo": "skydashnet/material-design-3-ui-skill",
+      "license": "MIT",
+      "sha256": "823d37da63fbcab0d94b7fbfc3b205045afc5918158bdf2a2d52cf8063ff4ffa",
+      "bytes": 12346
+    },
+    {
+      "path": "data/skydashnet-material-design-3-ui-skill/references/adaptive-design.md",
+      "repo": "skydashnet/material-design-3-ui-skill",
+      "license": "MIT",
+      "sha256": "0d6e24b27b692fd5db69e527070770f95dd64d9181bbd3d5037a6bb9de8092d3",
+      "bytes": 2058
+    },
+    {
+      "path": "data/solinkz-micro-interactions-skill/skills/micro-interactions/SKILL.md",
+      "repo": "solinkz/micro-interactions-skill",
+      "license": "MIT",
+      "sha256": "ccff71ba58a69db3446ddaede0c9dc4997dc1b25b8a8ee26808878d1523d817a",
+      "bytes": 22981
+    },
+    {
+      "path": "data/superdesigndev-superdesign-skill/DESIGN.md",
+      "repo": "superdesigndev/superdesign-skill",
+      "license": "MIT",
+      "sha256": "c91751a373e8313f7d83be2773395115cb9d36b02ad7cef16f4702be2501da34",
+      "bytes": 2094
+    },
+    {
+      "path": "data/superdesigndev-superdesign-skill/skills/superdesign/SKILL.md",
+      "repo": "superdesigndev/superdesign-skill",
+      "license": "MIT",
+      "sha256": "ffc49eeb9a8c5c0dbd0a4f8e0493a8b04ab9cc190b4d71d4ca8aa992413ff0ae",
+      "bytes": 16689
+    },
+    {
+      "path": "data/woodytest-eng2025-design-skills/skills/fontsource/SKILL.md",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT",
+      "sha256": "ad6afbc530a3b66d5649c9a349196612264a66fbfb9e3f90ddceab90d353d9f2",
+      "bytes": 15117
+    },
+    {
+      "path": "data/woodytest-eng2025-design-skills/skills/markdown-badges/SKILL.md",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT",
+      "sha256": "9a86603ca33acfb83ebad69c9066dec81ec3018b807b0bbee32cf6573907dfff",
+      "bytes": 14751
+    },
+    {
+      "path": "data/woodytest-eng2025-design-skills/skills/mermaid-diagrams/SKILL.md",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT",
+      "sha256": "1f79d5ead46fc93e92dde8f77078597dfd63c92f9627ea472b807b23eed55daa",
+      "bytes": 12781
+    },
+    {
+      "path": "data/woodytest-eng2025-design-skills/skills/radix-colors/SKILL.md",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT",
+      "sha256": "0a9ce87f304e85f87d2c0c8a8b63ece71730781d4ddcb876d5dbcbaa249e5b6a",
+      "bytes": 16653
+    },
+    {
+      "path": "data/woodytest-eng2025-design-skills/skills/readme-stats/SKILL.md",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT",
+      "sha256": "401ea096fedd613ba9da90ed47930a5d0b2f883c5f9acdf07788c68bce6640c0",
+      "bytes": 17739
+    },
+    {
+      "path": "data/woodytest-eng2025-design-skills/skills/roughjs-sketch/SKILL.md",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT",
+      "sha256": "9439a6cf8189b67d52fff2bbbf9117998662030f56a1fc7f70bb89c9148f7d2c",
+      "bytes": 10602
+    },
+    {
+      "path": "data/woodytest-eng2025-design-skills/skills/shadcn-ui/SKILL.md",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT",
+      "sha256": "3ff38aa8cb19836b4d913f95956c3538cf16d2b38d10502cd24fcc26d8c13f2a",
+      "bytes": 16810
+    },
+    {
+      "path": "data/woodytest-eng2025-design-skills/skills/simple-icons/SKILL.md",
+      "repo": "Woodytest-eng2025/design-skills",
+      "license": "MIT",
+      "sha256": "d6ff912f94cb67e136b5a6df24dad5c49e043319e3f91e82080370d749dfaf41",
+      "bytes": 13756
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/anthropic-brand/SKILL.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "4f10ee5873fb3f04c57273b42c1dd5ec0c0448b63882dd9972fc5e7c3b2311d0",
+      "bytes": 2749
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/anthropic-brand/references/DESIGN.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "5f06615e10036c957e0b55273d4eeac5abf425f61f85e32d64559f305c8879da",
+      "bytes": 2553
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/mintlify-brand/SKILL.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "00063eb7c8695f49b516f56ffb25a868e0774063efd1e2db91714bdca92cff53",
+      "bytes": 2825
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/mintlify-brand/references/DESIGN.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "5ee1880e6b783c1f53b3213ad4d8927a3c75559e119640410a9b433adf6e17c8",
+      "bytes": 2710
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/shadcn-brand/SKILL.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "48d88e9850bcc12b33eebb06612ca87319856cc1de8dbc7d25bf4be8993ad5d6",
+      "bytes": 2871
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/shadcn-brand/references/DESIGN.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "78d6e7c865caa25f20a0262dfa6e66cd74c0886b3ddb7fd5e66fae9c432e8b20",
+      "bytes": 2394
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/tailwind-brand/SKILL.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "e96a7629493a3a22558f419c6ed2123ec1f3707060b8ea443dd34b98077b7097",
+      "bytes": 2914
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/tailwind-brand/references/DESIGN.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "2ec44ca3a7224da8cfab76529bc1dc889a23a58e68e426e1c7d2f9d79d31f311",
+      "bytes": 2801
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/vercel-brand/SKILL.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "d92bd9af52fe9ad516b023f663e64654ed0646faa4b148e71aab4cd5961abb6d",
+      "bytes": 2859
+    },
+    {
+      "path": "data/yuvrajangadsingh-brand-skills/skills/vercel-brand/references/DESIGN.md",
+      "repo": "yuvrajangadsingh/brand-skills",
+      "license": "Apache-2.0",
+      "sha256": "46ee0b655b9b3fd6a022588190e1ff8c0f085216d069f1e10c0e7a95ece2ce89",
+      "bytes": 2489
+    }
+  ]
+}

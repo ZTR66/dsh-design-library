@@ -1,0 +1,58 @@
+dsh-design-library
+==================
+
+This package's own source code is MIT licensed (see LICENSE).
+
+The design documents bundled under data/ come from third-party repositories and
+remain under their original licenses. They were each verified to permit
+redistribution before being included.
+
+Apache-2.0
+---------
+
+The following documents are derived from yuvrajangadsingh/brand-skills, which is
+licensed under the Apache License, Version 2.0:
+
+  https://github.com/yuvrajangadsingh/brand-skills
+  http://www.apache.org/licenses/LICENSE-2.0
+
+They are reproduced under the terms of that license. No modifications were made
+beyond removing duplicate copies of identical content.
+
+MIT
+---
+
+The following repositories are MIT licensed and are the source of every other
+bundled document:
+
+  VoltAgent/awesome-design-md
+  abhayjnayakk/awesome-design-md
+  rahulholkar16/awesome-design-md
+  xdx888999/xdx-lab-design-skill
+  changemaner/design-taste-frontend
+  Cozythecoder/frontend-design-md
+  davidgarciagordo/design-review
+  DonkeyKing01/tasteful-ui-skill
+  jaywilburn/refactoring-ui-skill
+  LottieFiles/motion-design-skill
+  Paldom/icon-designer-skills
+  skydashnet/material-design-3-ui-skill
+  solinkz/micro-interactions-skill
+  superdesigndev/superdesign-skill
+  Woodytest-eng2025/design-skills
+
+Not bundled
+-----------
+
+Three repositories were evaluated and deliberately excluded because their
+licenses do not permit redistributing their text. They are listed in the plugin
+as external links only:
+
+  master5d/claude-design-skills    — no license declared
+  simota/design-skills             — no license declared
+  kubai087/kubai-icons             — custom source-available license, §3(b)
+                                     forbids redistributing its SKILL/PROMPT text
+
+Brand names mentioned in the design documents belong to their respective owners.
+A DESIGN.md is an independent analysis of publicly observable design patterns;
+it is not affiliated with or endorsed by the brand it describes.

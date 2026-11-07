@@ -1,0 +1,8 @@
+{
+  "meta": {
+    "title": "Design library",
+    "description": "Browse 290 local design systems, insert one into the conversation, register the bundled design skills for the agent, and review finished UI against a design system."
+  },
+  "nav": "Design library",
+  "insert": "Insert into chat"
+}

@@ -1,0 +1,6 @@
+- insert:
+    - id: design-library
+      name: '@ztr66/dsh-design-library'
+      config:
+        skillMode: curated
+        roots: []

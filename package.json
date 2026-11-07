@@ -1,0 +1,86 @@
+{
+  "name": "@ztr66/dsh-design-library",
+  "version": "0.1.0",
+  "description": "Browse 290 local design systems, register the bundled design skills for the agent, and check finished UI against a design system with computed contrast, palette and type findings.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "design",
+    "design-system",
+    "design-md",
+    "skills",
+    "ui"
+  ],
+  "license": "MIT",
+  "author": "ZTR66",
+  "type": "module",
+  "homepage": "https://github.com/ZTR66/dsh-design-library#readme",
+  "bugs": {
+    "url": "https://github.com/ZTR66/dsh-design-library/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZTR66/dsh-design-library.git"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib/*.js",
+    "data/**/*.md",
+    "data/index.generated.json",
+    "data/seed-index.json",
+    "sources.js",
+    "PROVENANCE.md",
+    "NOTICE",
+    "LICENSE",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "sync": "node scripts/sync.mjs",
+    "check": "node --check index.js && node --check client.js && node --check lib/scan.js && node --check lib/spec.js && node --check lib/contrast.js && node --check lib/review.js && node --check lib/routes.js && node --check lib/yaml.js && node --check sources.js",
+    "test": "node --test test/",
+    "test:sync": "node test/seed.test.mjs",
+    "prepack": "node scripts/guard-publish.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
