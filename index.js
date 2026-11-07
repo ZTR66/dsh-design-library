@@ -18,13 +18,14 @@
  * library is unavailable", never "the app will not start".
  */
 
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { buildIndex, cachedIndex, loadSeedIndex, publicEntry } from './lib/scan.js';
 import { buildReview } from './lib/review.js';
 import { registerRoutes, searchEntries } from './lib/routes.js';
+import { checkVideoEnvironment } from './lib/videoenv.js';
 import { readSettings, writeSettings } from './lib/settings.js';
 import { EXTERNAL } from './sources.js';
 
@@ -35,6 +36,23 @@ export const inject = ['webServer'];
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const SEED_ROOT = join(HERE, 'data');
+
+/**
+ * The video style catalogue, parsed once and kept.
+ *
+ * `catalog.json` ships with the package and never changes at runtime, so reading
+ * it on every search would be pure waste. A failed read returns null rather than
+ * throwing: a missing style library should not stop the design tools working.
+ */
+let videoCatalogPromise;
+function loadVideoCatalog() {
+  if (videoCatalogPromise === undefined) {
+    videoCatalogPromise = readFile(join(SEED_ROOT, 'video-styles', 'catalog.json'), 'utf8')
+      .then((text) => JSON.parse(text))
+      .catch(() => null);
+  }
+  return videoCatalogPromise;
+}
 const MAX_DOC_BYTES = 200 * 1024;
 const APPLY_TIMEOUT_MS = 15_000;
 
@@ -472,6 +490,175 @@ function toolSpecs({ getIndex }) {
           lines.push('', '## Notes');
           for (const note of review.notes) lines.push(`- ${note}`);
         }
+        return lines.join('\n');
+      },
+    },
+
+    // ---- video styles -----------------------------------------------------
+    {
+      name: 'video_style_search',
+      description: [
+        'Search 44 video style specifications: concrete looks for code-rendered films — 古风, 粉笔黑板,',
+        '星空光点, 像素, 木刻, 霓虹赛博 and so on. Each entry carries exact hex values, fonts, motion timings',
+        'and the list of things you must not change.',
+        '',
+        'Use it when the user wants a video rather than a UI. `query` matches name, the one-line summary and',
+        'the style keywords (which include topic words like 历史, 数学, 宇宙, 游戏). Filter by `family` to stay',
+        'in one visual family, or `tier` to avoid styles that need generated imagery.',
+      ].join('\n'),
+      parameters: {
+        query: { type: 'string', description: 'Free-text terms; every term must match. Omit to list all.' },
+        family: { type: 'string', description: 'One of: 东方, 暗场概念, 明亮流行, 印刷与纸, 图解与设计, 剪辑与纪实, 电影感, 游戏.' },
+        tier: { type: 'string', enum: ['基础', '增强'], description: '基础 renders from code alone; 增强 needs generated imagery.' },
+        limit: { type: 'number', description: 'Maximum results, 1-44. Defaults to 12.' },
+      },
+      output: { schema: { type: 'string' }, render: (args, value) => [{ type: 'text', text: value }] },
+      async execute(args) {
+        const catalog = await loadVideoCatalog();
+        if (catalog === null) {
+          return 'The video style library is missing from this installation. Reinstall the plugin.';
+        }
+        const terms = String(args?.query ?? '').toLowerCase().split(/\s+/).filter(Boolean);
+        const limit = Math.max(1, Math.min(44, Number(args?.limit ?? 12)));
+
+        const scored = [];
+        for (const style of catalog.styles) {
+          if (args?.family !== undefined && args.family !== '' && style.fam !== args.family) continue;
+          if (args?.tier !== undefined && args.tier !== '' && style.tier !== args.tier) continue;
+          const haystack = [style.name, style.en, style.one, style.fit, style.fam, style.cat, (style.keywords ?? []).join(' ')]
+            .join('\n').toLowerCase();
+          if (!terms.every((term) => haystack.includes(term))) continue;
+          let score = 0;
+          for (const term of terms) {
+            if (String(style.name ?? '').toLowerCase().includes(term)) score += 30;
+            if ((style.keywords ?? []).some((k) => String(k).toLowerCase() === term)) score += 20;
+            else if ((style.keywords ?? []).some((k) => String(k).toLowerCase().includes(term))) score += 8;
+            score += 1;
+          }
+          scored.push({ style, score });
+        }
+        scored.sort((a, b) => b.score - a.score);
+
+        if (scored.length === 0) {
+          return `No style matched ${JSON.stringify(args?.query ?? '')}. Families: ${catalog.families.join('、')}.`;
+        }
+
+        const lines = [`${catalog.styles.length} styles in the library; ${scored.length} match.`, ''];
+        for (const { style } of scored.slice(0, limit)) {
+          lines.push(`- key: ${style.key}`);
+          lines.push(`  name: ${style.name} (${style.en}) · ${style.fam} · ${style.tier}档`);
+          lines.push(`  look: ${style.one}`);
+          lines.push(`  fits: ${style.fit}`);
+          lines.push(`  templates: ${(style.templates ?? []).join('/')}`);
+        }
+        lines.push('', 'Read one with video_style_read({ key }).');
+        return lines.join('\n');
+      },
+    },
+    {
+      name: 'video_style_read',
+      description: [
+        'Read one video style specification, or one of the shared craft documents.',
+        '',
+        '`part: "spec"` (default) returns the style itself: palette with exact hex values, typography,',
+        'motion timing, camera grammar, and the three constraint lists (what you may change, what changes',
+        'the flavour, what you must not touch).',
+        '`part: "craft"` returns a shared method document such as visual-grammar (sentence → shot),',
+        'quality-gate (how to inspect a cut), or structure-bible (narrative shape).',
+        '`part: "mv"` returns the music-video workflow documents.',
+      ].join('\n'),
+      parameters: {
+        key: { type: 'string', required: true, description: 'Style key from video_style_search, or a craft/mv document id.' },
+        part: { type: 'string', enum: ['spec', 'craft', 'mv'], description: 'Which library to read from. Defaults to spec.' },
+      },
+      output: { schema: { type: 'string' }, render: (args, value) => [{ type: 'text', text: value }] },
+      async execute(args) {
+        const key = String(args?.key ?? '').trim();
+        if (key === '') return 'key is required.';
+        const part = args?.part ?? 'spec';
+
+        if (part === 'spec') {
+          const index = await getIndex(false);
+          const entry = index.entries.find((e) => e.kind === 'video' && (e.id.endsWith(`/${key}/STYLE`) || e.id === key));
+          if (entry === undefined) {
+            const catalog = await loadVideoCatalog();
+            const keys = catalog?.styles?.map((s) => s.key) ?? [];
+            return `Unknown style "${key}". Try: ${keys.slice(0, 20).join(', ')}…`;
+          }
+          let content;
+          try {
+            content = await readFile(entry.path, 'utf8');
+          }
+          catch (error) {
+            return `Cannot read ${entry.id}: ${String(error?.message ?? error)}`;
+          }
+          const d = entry.document;
+          const head = [
+            `<!-- ${entry.name} · ${d.family ?? ''} · ${d.tier ?? ''} -->`,
+            d.colors ? `<!-- palette: ${d.colors.join(' ')} -->` : '',
+            '',
+          ].filter(Boolean);
+          return head.concat(content).join('\n');
+        }
+
+        const dir = part === 'craft' ? 'craft' : 'mv';
+        const dirPath = join(HERE, 'data', 'video-styles', dir);
+        let files;
+        try {
+          files = await readdir(dirPath);
+        }
+        catch {
+          return `The ${dir} documents are missing from this installation.`;
+        }
+        const file = key.endsWith('.md') ? key : `${key}.md`;
+        if (!files.includes(file)) {
+          return `Unknown ${dir} document "${key}". Available: ${files.join(', ')}`;
+        }
+        return await readFile(join(dirPath, file), 'utf8');
+      },
+    },
+    {
+      name: 'video_env_check',
+      description: [
+        'Check whether this machine can render a video, and say exactly what is missing.',
+        '',
+        'Run this before promising a video. It reports, per pipeline stage: ffmpeg, a Chromium browser,',
+        'the Playwright binding, image libraries, a voice engine, and beat-analysis tools. Missing items come',
+        'with the exact install command.',
+        '',
+        'It also reports which Python interpreter holds which package — a script that narrates and renders',
+        'in one pass fails when those live in different interpreters.',
+      ].join('\n'),
+      parameters: {},
+      output: { schema: { type: 'string' }, render: (args, value) => [{ type: 'text', text: value }] },
+      async execute() {
+        const report = await checkVideoEnvironment();
+        const lines = [
+          `# Video environment — ${report.platform}`,
+          '',
+        ];
+        for (const [group, items] of Object.entries(report.groups)) {
+          lines.push(`## ${group}`);
+          for (const item of items) {
+            const mark = item.ok ? 'ready' : (item.required ? 'MISSING' : 'optional');
+            const bits = [`- ${item.name}: ${mark}`];
+            if (item.version) bits.push(`(${item.version})`);
+            if (item.python) bits.push(`in ${item.python}`);
+            lines.push(bits.join(' '));
+            if (!item.ok && item.install) lines.push(`  install: ${item.install}`);
+            if (item.neededFor) lines.push(`  needed for: ${item.neededFor}`);
+            if (item.note) lines.push(`  note: ${item.note}`);
+          }
+          lines.push('');
+        }
+        lines.push('## Can produce');
+        for (const [kind, ok] of Object.entries(report.readyFor)) {
+          lines.push(`- ${kind}: ${ok ? 'yes' : 'no'}`);
+        }
+        if (report.pythonConflict?.detected) {
+          lines.push('', '## Python split', report.pythonConflict.detail, `advice: ${report.pythonConflict.advice}`);
+        }
+        if (report.nextStep) lines.push('', `## Next step`, report.nextStep);
         return lines.join('\n');
       },
     },

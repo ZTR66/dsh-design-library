@@ -1,7 +1,7 @@
 {
   "name": "@ztr66/dsh-design-library",
-  "version": "0.1.0",
-  "description": "Browse 290 local design systems, register the bundled design skills for the agent, and check finished UI against a design system with computed contrast, palette and type findings.",
+  "version": "0.2.0",
+  "description": "Browse 290 design documents and 44 video styles, register design skills for the agent, check UI against a design system with computed findings, and report exactly what a machine needs to render a code-drawn film.",
   "keywords": [
     "dsh",
     "dsh-plugin",
@@ -47,7 +47,8 @@
     "README.zh.md",
     "CHANGELOG.md",
     "locale/*.json",
-    "icon.svg"
+    "icon.svg",
+    "data/video-styles/**"
   ],
   "engines": {
     "node": ">=20",

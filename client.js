@@ -74,6 +74,7 @@ window.__ModuleLoader__.load({
           allKinds: '全部类型',
           designs: '设计规范',
           skills: '技能',
+          videos: '视频风格',
           entries: '条目',
           empty: '没有匹配的条目',
           emptyHint: '换个关键词，或把来源切回「全部来源」。',
@@ -131,6 +132,7 @@ window.__ModuleLoader__.load({
           allKinds: 'All kinds',
           designs: 'Design systems',
           skills: 'Skills',
+          videos: 'Video styles',
           entries: 'entries',
           empty: 'Nothing matches',
           emptyHint: 'Try a broader word, or switch the source filter back to All sources.',
@@ -680,6 +682,13 @@ window.__ModuleLoader__.load({
       ]);
     }
 
+    /** Human label for one entry kind. */
+    function kindLabel(kind) {
+      if (kind === 'video') return COPY.videos;
+      if (kind === 'skill') return COPY.skills;
+      return COPY.designs;
+    }
+
     function Detail({ entry, onInsert, store }) {
       const [tab, setTab] = React.useState('overview');
       const [review, setReview] = React.useState(null);
@@ -742,7 +751,7 @@ window.__ModuleLoader__.load({
       return h('div', { style: S.detail },
         h('h2', { style: S.h2 }, entry.name),
         h('div', { style: S.metaLine },
-          `${entry.kind === 'design' ? COPY.designs : COPY.skills} · ${entry.folder}`,
+          `${kindLabel(entry.kind)} · ${entry.folder}`,
           licenseOf(entry.folder) !== null ? ` · ${COPY.license}: ${licenseOf(entry.folder)}` : '',
           entry.origin === 'seed' ? ' · bundled' : ` · ${COPY.source}: ${entry.origin}`),
         h('div', { style: { display: 'flex', gap: 8, marginBottom: 16, flexWrap: 'wrap' } },
@@ -1160,7 +1169,8 @@ window.__ModuleLoader__.load({
               h('select', { style: S.select, value: kind, onChange: (event) => setKind(event.target.value), 'aria-label': COPY.allKinds },
                 h('option', { value: '' }, COPY.allKinds),
                 h('option', { value: 'design' }, COPY.designs),
-                h('option', { value: 'skill' }, COPY.skills)),
+                h('option', { value: 'skill' }, COPY.skills),
+                h('option', { value: 'video' }, COPY.videos)),
               h('select', { style: S.select, value: source, onChange: (event) => setSource(event.target.value), 'aria-label': COPY.allSources },
                 h('option', { value: '' }, COPY.allSources),
                 sources.map((folder) => h('option', { key: folder, value: folder }, folder)))),
@@ -1184,7 +1194,7 @@ window.__ModuleLoader__.load({
                   },
                   h('div', { style: { flex: 1, minWidth: 0 } },
                     h('div', { style: S.rowName }, entry.name),
-                    h('div', { style: S.rowMeta }, `${entry.kind === 'design' ? COPY.designs : COPY.skills} · ${entry.folder}`),
+                    h('div', { style: S.rowMeta }, `${kindLabel(entry.kind)} · ${entry.folder}`),
                     h(Swatches, { colors: entry.colors ?? (entry.extracted?.colors ? Object.fromEntries(entry.extracted.colors.map((value, index) => [String(index), value])) : null), limit: 6 })))))),
           selected !== null
             ? h(Detail, { entry: selected, onInsert: insert, store })

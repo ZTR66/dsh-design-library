@@ -65,6 +65,80 @@ function folderOf(dir) {
   return parts[parts.length - 1];
 }
 
+/**
+ * Declare the video-style documents for the publish guard.
+ *
+ * These arrive through `fetch-video-styles.mjs` rather than the source checkout,
+ * so they are not part of `report.bundled`. The guard checks that every markdown
+ * file under data/ has a declaration naming a cleared repository — and it is
+ * right to: the whole point is that no file enters the package without a licence
+ * trail. Listing them here keeps that guarantee instead of weakening the guard.
+ *
+ * Every source in this list is MIT and permits redistribution of its
+ * documentation. Images, BGM and voice samples are deliberately never fetched.
+ */
+async function videoDocuments() {
+  // Order matters: a file is attributed to the most specific prefix. Listing the
+  // parent last would otherwise claim the children, which is how the first
+  // version credited the whole library to this package.
+  const sources = [
+    ['video-styles/styles', 'andyhuo520/vibe-knowledge'],
+    ['video-styles/craft', 'xiazhuo123456789/vibe-knowledge-video'],
+    ['video-styles/mv', 'Win-Hao/music-mv'],
+    ['video-styles', 'dsh-design-library'],
+  ];
+  const out = [];
+  const seen = new Set();
+
+  const add = async (relPath, repo) => {
+    const key = relPath.split(sep).join('/');
+    if (seen.has(key)) return;
+    seen.add(key);
+    out.push(await documentEntry(relPath, repo));
+  };
+
+  for (const [rel, repo] of sources) {
+    const dir = join(DATA_ROOT, rel);
+    let names;
+    try {
+      names = await readdir(dir, { withFileTypes: true });
+    }
+    catch {
+      continue;
+    }
+    for (const dirent of names) {
+      if (dirent.isFile() && dirent.name.endsWith('.md')) {
+        await add(join(rel, dirent.name), repo);
+      }
+      else if (dirent.isDirectory() && rel === 'video-styles/styles') {
+        // Only the styles folder nests: <key>/STYLE.md.
+        let inner;
+        try {
+          inner = await readdir(join(dir, dirent.name));
+        }
+        catch {
+          continue;
+        }
+        for (const name of inner.filter((n) => n.endsWith('.md'))) {
+          await add(join(rel, dirent.name, name), repo);
+        }
+      }
+    }
+  }
+  return out;
+}
+
+async function documentEntry(relPath, repo) {
+  const bytes = await readFile(join(DATA_ROOT, relPath));
+  return {
+    path: `data/${relPath.split(sep).join('/')}`,
+    repo,
+    license: repo === 'dsh-design-library' ? 'MIT' : 'MIT',
+    sha256: createHash('sha256').update(bytes).digest('hex'),
+    bytes: bytes.length,
+  };
+}
+
 async function main() {
   const report = {
     bundled: [],
@@ -140,7 +214,18 @@ async function main() {
     return;
   }
 
-  await rm(DATA_ROOT, { recursive: true, force: true });
+  // Clear only what this script owns.
+  //
+  // The first version ran `rm -rf data/` and rebuilt from scratch. That was
+  // correct when every file under data/ came from this script — but the video
+  // style library is fetched by `fetch-video-styles.mjs` instead, so a rebuild
+  // silently deleted 67 downloaded files that take a network round trip to get
+  // back. Removing each bundled source folder individually leaves anything else
+  // under data/ alone.
+  for (const source of BUNDLED) {
+    const folder = folderOf(source.dir);
+    await rm(join(DATA_ROOT, folder), { recursive: true, force: true });
+  }
   await mkdir(DATA_ROOT, { recursive: true });
 
   for (const record of report.bundled) {
@@ -211,7 +296,7 @@ async function main() {
       license: record.license,
       sha256: record.hash,
       bytes: record.bytes,
-    })),
+    })).concat(await videoDocuments()),
   };
   await writeFile(join(DATA_ROOT, 'index.generated.json'), `${JSON.stringify(generated, null, 2)}\n`, 'utf8');
 
@@ -242,6 +327,66 @@ async function main() {
       document,
     });
   }
+  // ---- video styles -------------------------------------------------------
+  //
+  // These do not come from the source checkout: they are fetched separately by
+  // scripts/fetch-video-styles.mjs, so they are indexed from wherever they landed
+  // rather than from `report.bundled`. They share the same prebuilt index so one
+  // read serves every document kind.
+  const { parseVideoStyle } = await import('../lib/spec.js');
+  const videoRoot = join(DATA_ROOT, 'video-styles', 'styles');
+  let videoDirs = [];
+  try {
+    videoDirs = await readdir(videoRoot, { withFileTypes: true });
+  }
+  catch { /* styles not fetched on this machine; the index simply has none */ }
+
+  for (const dirent of videoDirs.filter((d) => d.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+    const file = join(videoRoot, dirent.name, 'STYLE.md');
+    let text;
+    try {
+      text = await readFile(file, 'utf8');
+    }
+    catch { continue; }
+    const document = parseVideoStyle(text, dirent.name);
+    entries.push({
+      id: `video-styles/styles/${dirent.name}/STYLE`,
+      kind: 'video',
+      relPath: `video-styles/styles/${dirent.name}/STYLE.md`,
+      folder: 'video-styles',
+      repo: 'andyhuo520/vibe-knowledge',
+      license: 'MIT',
+      bytes: Buffer.byteLength(text, 'utf8'),
+      sha256: createHash('sha256').update(text).digest('hex'),
+      name: document.name,
+      description: document.description,
+      document,
+    });
+  }
+
+  // The video skill document sits beside the styles it drives. It is a SKILL.md
+  // like any other from the registry's point of view, so it is indexed as a
+  // skill — the model then finds "how to make a video" in the same catalogue it
+  // already searches for design skills.
+  try {
+    const skillText = await readFile(join(DATA_ROOT, 'video-styles', 'SKILL.md'), 'utf8');
+    const skillDoc = peekSeedDocument(skillText, 'video-styles/SKILL.md');
+    entries.push({
+      id: 'video-styles/SKILL',
+      kind: 'skill',
+      relPath: 'video-styles/SKILL.md',
+      folder: 'video-styles',
+      repo: 'dsh-design-library',
+      license: 'MIT',
+      bytes: Buffer.byteLength(skillText, 'utf8'),
+      sha256: createHash('sha256').update(skillText).digest('hex'),
+      name: skillDoc.name,
+      description: skillDoc.description,
+      document: skillDoc,
+    });
+  }
+  catch { /* skill doc absent; the index simply has none */ }
+
   await writeFile(join(DATA_ROOT, 'seed-index.json'), `${JSON.stringify({
     schema: 'dsh-design-library/seed-index/v1',
     generatedAt: generated.generatedAt,
@@ -250,6 +395,7 @@ async function main() {
     stats: {
       designs: entries.filter((entry) => entry.kind === 'design').length,
       skills: entries.filter((entry) => entry.kind === 'skill').length,
+      videos: entries.filter((entry) => entry.kind === 'video').length,
     },
     entries,
   })}\n`, 'utf8');

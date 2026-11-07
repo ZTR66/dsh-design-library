@@ -1,6 +1,6 @@
 {
   "schema": "dsh-design-library/seed/v1",
-  "generatedAt": "2026-11-07T15:19:39.748Z",
+  "generatedAt": "2026-11-07T18:01:14.826Z",
   "bundledSources": [
     {
       "dir": "voltagent-awesome-design-md",
@@ -2151,6 +2151,482 @@
       "license": "Apache-2.0",
       "sha256": "46ee0b655b9b3fd6a022588190e1ff8c0f085216d069f1e10c0e7a95ece2ce89",
       "bytes": 2489
+    },
+    {
+      "path": "data/video-styles/styles/aurora/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "2a9e3d3c34f1755d2e2a2109373e07431f1d55218bbadb3a8fb2c805220d5c8d",
+      "bytes": 1429
+    },
+    {
+      "path": "data/video-styles/styles/blueprint/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "e96dbd2d075432f19eb6e6dd3ca76a643f80751b4f9d6efd038470e844bfb38a",
+      "bytes": 1614
+    },
+    {
+      "path": "data/video-styles/styles/caption-news/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "47fafd4777271c79215c811186fea874bfbd777c60be530ec3682fec1e474ef8",
+      "bytes": 1609
+    },
+    {
+      "path": "data/video-styles/styles/cards/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "d2196af215ccb99ff055df04b4ff4cf5a4ebd9bb1ab60a556839639967903e15",
+      "bytes": 1618
+    },
+    {
+      "path": "data/video-styles/styles/chalk/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "eea567cb4bf06126199eb034817f638926d08543770e530dd327fa2ec4135f2d",
+      "bytes": 1660
+    },
+    {
+      "path": "data/video-styles/styles/clay/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "c16e6c1bfe531250a0eb359f6d1a2041bc0763885f25a480bb17eca7a075a75f",
+      "bytes": 1613
+    },
+    {
+      "path": "data/video-styles/styles/collage/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "cbf5ddf37052773552b42f06204c9b98122779254ba6ac2c8c3180df0c794515",
+      "bytes": 2000
+    },
+    {
+      "path": "data/video-styles/styles/constructivist/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "32db0f7e2357d5959d7c894303c25716346e385086539712b11779dbc19855e5",
+      "bytes": 1471
+    },
+    {
+      "path": "data/video-styles/styles/copper/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "a15a394fc3b90138708e4f3e601faf3760602414cd12a0ccdfbd9791b28b2d20",
+      "bytes": 2095
+    },
+    {
+      "path": "data/video-styles/styles/darkgold/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "6dfc424266c8c0c6cff5d4263806bfa401db60076190e684c12fd0833499cb2e",
+      "bytes": 1539
+    },
+    {
+      "path": "data/video-styles/styles/darkmath/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "a4d2e1343d1455870754e47e8199bae72c3049714742e6dea8a3c212f3bd7eda",
+      "bytes": 1739
+    },
+    {
+      "path": "data/video-styles/styles/deco/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "0baaaf0b448064fae2763c90d6ba9d09aa2ceedf5d107ae3fb276334b2db1ed9",
+      "bytes": 1540
+    },
+    {
+      "path": "data/video-styles/styles/desktop/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "c91609d615626df99c0f4e0a3b90a6083a9d1dc94e1aae5faa52ada9d5fde85b",
+      "bytes": 1606
+    },
+    {
+      "path": "data/video-styles/styles/dunhuang/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "8167acd4bcd224fb01ac60f11ea6474d3fb2c3227df1899dc68a3510eb5449a7",
+      "bytes": 1987
+    },
+    {
+      "path": "data/video-styles/styles/editorial/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "a3daa88680a13ad1bfa5d8fb708915654390146407cbaa5e777c177c824c088b",
+      "bytes": 1569
+    },
+    {
+      "path": "data/video-styles/styles/farm/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "9f83ad47ccf2ca015d7f2da0a1b140ea0aac6c7659ad572a317c2b7b7436c3bb",
+      "bytes": 2256
+    },
+    {
+      "path": "data/video-styles/styles/gufeng/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "9fbfab6e4293e53826064358112d5022fcb3ad29b69cb022b9c137d46e8a4c74",
+      "bytes": 1998
+    },
+    {
+      "path": "data/video-styles/styles/investigation/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "63c6c638543398e4386206ff52e5bd95a1fc36819ca17db96cbec51ef0f7d32e",
+      "bytes": 1799
+    },
+    {
+      "path": "data/video-styles/styles/isometric/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "efd6a79c86c959a03ae1346fd3c2c876d3ba046c021e3d1227e25fbd856836db",
+      "bytes": 1550
+    },
+    {
+      "path": "data/video-styles/styles/isotype/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "3a028e0bb3463641fee6eea92c9adcc2383564bebae45a8731e7dec702be8fef",
+      "bytes": 1535
+    },
+    {
+      "path": "data/video-styles/styles/journal/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "d69f0338d61c0c54a9e7e90250fe342e9852010b63dcbf5b502ac5c4b4dafec5",
+      "bytes": 1571
+    },
+    {
+      "path": "data/video-styles/styles/keynote/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "6f4bacce337c459774b0626a2e0e6610f25c158f3809738214e0d8d223efb0eb",
+      "bytes": 1427
+    },
+    {
+      "path": "data/video-styles/styles/lighttable/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "a2cc5196e70fcdcec7067593379fed82aef13018f4f74977b010939520e56299",
+      "bytes": 1713
+    },
+    {
+      "path": "data/video-styles/styles/memphis/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "4c57751976d5006b90df7c8cedcf171a67dd40f3b354cb17639065ac1054f412",
+      "bytes": 1585
+    },
+    {
+      "path": "data/video-styles/styles/metro/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "14e644aa5dce2b43a483c10730cfbf73a9c81b3d65c5a0f32c93652f4ba766fe",
+      "bytes": 1597
+    },
+    {
+      "path": "data/video-styles/styles/minimal/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "7427cb45979b2eba9be3989ab5cbec42636eec5ccd7fd20b799ea9ab25b0614f",
+      "bytes": 1451
+    },
+    {
+      "path": "data/video-styles/styles/neon/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "c6a647c5dfc0b2b0bb2b848e7b7c26ab5c9400fa95fed8c4b5a7f76758740a6f",
+      "bytes": 1602
+    },
+    {
+      "path": "data/video-styles/styles/paper/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "3c0d789b51f4f55cb615305b1b3963245d9e87ba13a8d7bb1aaf701e99697310",
+      "bytes": 1445
+    },
+    {
+      "path": "data/video-styles/styles/pixel/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "ad4202528fbc16f95562f01328eb6fa3a861dec98f4d28235874495d37fb545a",
+      "bytes": 1379
+    },
+    {
+      "path": "data/video-styles/styles/poster/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "33a05a578bf1552a16c163e6da7cde082f78082d81d316a51c19b04ea24d9edb",
+      "bytes": 1516
+    },
+    {
+      "path": "data/video-styles/styles/qinghua/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "25adfca5e9e7f0aebb7b9536c01ddc4e4d220bb84fd44795e16df59542d3c73f",
+      "bytes": 1821
+    },
+    {
+      "path": "data/video-styles/styles/ransom/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "b161599d6ae7591cb2035ed7ee31e457e453265dec3767e163c383db7b85a55a",
+      "bytes": 1572
+    },
+    {
+      "path": "data/video-styles/styles/riso/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "1bf25add47f57ee316dc6496bae94a77e973ca63dc70d0f4fd5174489e1b06d9",
+      "bytes": 1534
+    },
+    {
+      "path": "data/video-styles/styles/rpg/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "45f6a637fd34b6384a6e9ed07376c4de19c7511aecf3be82279d7c1efde85674",
+      "bytes": 1528
+    },
+    {
+      "path": "data/video-styles/styles/scroll/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "00c01dc3986ef7228010dd536fbd87a456238387e6155dd96cd9681e4763711f",
+      "bytes": 2070
+    },
+    {
+      "path": "data/video-styles/styles/silent/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "5e7f46e7e0dce33a6f73d67e29203fc5970242a9f14524bca2e31ca7a759464d",
+      "bytes": 1596
+    },
+    {
+      "path": "data/video-styles/styles/sketch/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "2429c3fbce83ed14aedf8a3b839568fe659de2cc9b496830747b780a25917200",
+      "bytes": 2396
+    },
+    {
+      "path": "data/video-styles/styles/starfield/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "051de0a4eb1c665b461e1d1a0100a438fa2aeee453c92de43bf5e9187a31955e",
+      "bytes": 1630
+    },
+    {
+      "path": "data/video-styles/styles/swiss/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "69d32d0b7f76df483ac9e45ad2cd47da18f4d80be06c5452c24e9d3ba240878d",
+      "bytes": 1583
+    },
+    {
+      "path": "data/video-styles/styles/titles/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "e9cebdc5b69eaac338fc9495e7f7ca5f76028067896207d8dd9dc7d50b63ae95",
+      "bytes": 1663
+    },
+    {
+      "path": "data/video-styles/styles/tvnews/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "e326227aba11fa2bc83653ead9a42d9914f373f1f625f8f32ce655f886c3fd42",
+      "bytes": 1736
+    },
+    {
+      "path": "data/video-styles/styles/vapor/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "747664924b88010878c4cb45fb1b1b103aa989a92cd7e2aee07d073dd355f85a",
+      "bytes": 1585
+    },
+    {
+      "path": "data/video-styles/styles/variety/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "337b2f2df3697da70f4e94b19157945e684e3b88e82edf8e8e173c1d8b945487",
+      "bytes": 1866
+    },
+    {
+      "path": "data/video-styles/styles/woodcut/STYLE.md",
+      "repo": "andyhuo520/vibe-knowledge",
+      "license": "MIT",
+      "sha256": "cdd667ff8c1b1da4423b9251e73b35248f90404017b025d6d56c9954033320d4",
+      "bytes": 1913
+    },
+    {
+      "path": "data/video-styles/craft/alternate-worlds.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "3aa3acf0ba984efbfa3e3891d8f535c897fb54bed4ee3760d201e7a48adade1a",
+      "bytes": 4290
+    },
+    {
+      "path": "data/video-styles/craft/beat-scaffold.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "1df944b675cca2a4b6824744b46af864b2bc0f93a1c11c53b0f33ee659cc799e",
+      "bytes": 5037
+    },
+    {
+      "path": "data/video-styles/craft/copywriting-rules.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "3581657d594cc9028961241d9f2c6370f0321de61fbbbaffbeda6ba7f4396a96",
+      "bytes": 5594
+    },
+    {
+      "path": "data/video-styles/craft/image-prompts.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "d00435beee9efdae7da133f22a3455f13d880c8b3804ab1b98f8e9a7cdde3606",
+      "bytes": 2813
+    },
+    {
+      "path": "data/video-styles/craft/narrative-templates.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "d0fd05b185a80e9aef7abf29fd657d17e4dc69438223b0cee40bd8983abf90ab",
+      "bytes": 11385
+    },
+    {
+      "path": "data/video-styles/craft/prompt-brief.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "16a14604805134f8041f662e89667cfebc5f05980770f6a252ed7ab2fdcd1764",
+      "bytes": 4646
+    },
+    {
+      "path": "data/video-styles/craft/quality-gate.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "671df922c03bdc7e796993e5b7d06796c0ca7062a23acda87d942bf5a28ba6d2",
+      "bytes": 6336
+    },
+    {
+      "path": "data/video-styles/craft/remotion-track.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "9193fa56a90859dc2ef60c3930bcd89206e43dbe54b3b31b801a4d3d442194a2",
+      "bytes": 5554
+    },
+    {
+      "path": "data/video-styles/craft/render-craft.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "1b227f4fcdd7ca244205a0bd094fe96276edb27c1b0526e6f3a5f185bb9d42df",
+      "bytes": 5562
+    },
+    {
+      "path": "data/video-styles/craft/rework-scripts.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "e0ad2b692e6d460df189d49e334b1794c78423453cc6cb9e96939694821ad76d",
+      "bytes": 7186
+    },
+    {
+      "path": "data/video-styles/craft/structure-bible.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "a968d609c0fe9bd711725b7599894a3d8927dab41aaea0c255ca4b977994a515",
+      "bytes": 5736
+    },
+    {
+      "path": "data/video-styles/craft/style-guide.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "5b9f557e6b3ad0d2bcc504174d085de2327fe6d33e347b829cd0b7326bb57de0",
+      "bytes": 10688
+    },
+    {
+      "path": "data/video-styles/craft/visual-grammar.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "05babb9e38ee833c7c29f97f42d40726b947995d848da53d635ec5f86dc711dd",
+      "bytes": 6853
+    },
+    {
+      "path": "data/video-styles/craft/visualization-design.md",
+      "repo": "xiazhuo123456789/vibe-knowledge-video",
+      "license": "MIT",
+      "sha256": "fbb3b963cbfe4e06c52790f94f5697a9a3e4c68e4a85408ffb0bdf0aeb98a39e",
+      "bytes": 7502
+    },
+    {
+      "path": "data/video-styles/mv/character.md",
+      "repo": "Win-Hao/music-mv",
+      "license": "MIT",
+      "sha256": "8d4f721dabc157e8e12ccc42ebcd0ff9169f65c2eae4b199ee66929179a36962",
+      "bytes": 2338
+    },
+    {
+      "path": "data/video-styles/mv/learn-style.md",
+      "repo": "Win-Hao/music-mv",
+      "license": "MIT",
+      "sha256": "403d743804b0d89f7158b21ca8d8b2b6d8db83a21a1920f0a041376696d34c15",
+      "bytes": 2660
+    },
+    {
+      "path": "data/video-styles/mv/render.md",
+      "repo": "Win-Hao/music-mv",
+      "license": "MIT",
+      "sha256": "4209a26a8b4c424c6b0ea1a92b4c827f6354d6175c98b4318696a36860b1c7c5",
+      "bytes": 9477
+    },
+    {
+      "path": "data/video-styles/mv/review.md",
+      "repo": "Win-Hao/music-mv",
+      "license": "MIT",
+      "sha256": "e7a3c7a4e0db9c69e00d6e83e0850ae3b3a240d7472a0c75c1b93fe0e9ae44fd",
+      "bytes": 4112
+    },
+    {
+      "path": "data/video-styles/mv/storyboard.md",
+      "repo": "Win-Hao/music-mv",
+      "license": "MIT",
+      "sha256": "55b2be20fdda8864629556b580a5e5200c186ca9b42568eb19d6d76fd5fb73d0",
+      "bytes": 3112
+    },
+    {
+      "path": "data/video-styles/mv/styles.md",
+      "repo": "Win-Hao/music-mv",
+      "license": "MIT",
+      "sha256": "b63e1b5b83a4d1afaab87956744deec40a0abcadac939ea793f4315ab2e5580f",
+      "bytes": 6567
+    },
+    {
+      "path": "data/video-styles/mv/transitions.md",
+      "repo": "Win-Hao/music-mv",
+      "license": "MIT",
+      "sha256": "97eaf2235341ccccb8cfeeec79d8f6e5abd134df53b8e4c6e7496f57ef4e3280",
+      "bytes": 2802
+    },
+    {
+      "path": "data/video-styles/INDEX.md",
+      "repo": "dsh-design-library",
+      "license": "MIT",
+      "sha256": "aeab0f802e2a2ebb2eb3e223d3a0c10896abbcc2c6e38190361f3b5eafd5dcc1",
+      "bytes": 11161
+    },
+    {
+      "path": "data/video-styles/PROVENANCE.md",
+      "repo": "dsh-design-library",
+      "license": "MIT",
+      "sha256": "cbd19678f4b7e5df655e673d4c3af98d657ee526627ba67121c0196cf3b3496a",
+      "bytes": 2331
+    },
+    {
+      "path": "data/video-styles/SKILL.md",
+      "repo": "dsh-design-library",
+      "license": "MIT",
+      "sha256": "0cdce19756fd41394043910f6aabc5140d8e1126b177d3336678b8c61ca39fd6",
+      "bytes": 6898
     }
   ]
 }

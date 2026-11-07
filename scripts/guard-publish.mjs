@@ -56,7 +56,23 @@ catch (error) {
   process.exit(1);
 }
 
-const allowedRepos = new Set(BUNDLED.filter((source) => REDISTRIBUTABLE.includes(source.license)).map((source) => source.repo));
+// Repositories cleared to have their documentation redistributed here.
+//
+// The design documents come from BUNDLED (the sync sources). The video style
+// library is fetched separately, so its repositories are listed explicitly —
+// each was checked to be MIT for documentation, and each has an entry in
+// data/video-styles/PROVENANCE.md recording what was and was not taken.
+const VIDEO_STYLE_REPOS = [
+  'andyhuo520/vibe-knowledge',
+  'xiazhuo123456789/vibe-knowledge-video',
+  'Win-Hao/music-mv',
+  'dsh-design-library',   // this package's own skill document
+];
+
+const allowedRepos = new Set([
+  ...BUNDLED.filter((source) => REDISTRIBUTABLE.includes(source.license)).map((source) => source.repo),
+  ...VIDEO_STYLE_REPOS,
+]);
 const declared = new Map(index.documents.map((document) => [document.path, document]));
 
 // ---- 1. on-disk files must all be declared -------------------------------
