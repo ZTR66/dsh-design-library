@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Design library",
-    "description": "Browse 290 local design systems, insert one into the conversation, register the bundled design skills for the agent, and review finished UI against a design system."
+    "description": "Browse 716 entries: design specs, visual styles, shot recipe cards and craft documents; insert one into the conversation; register skills for the agent; review finished UI against a design system and check for overlapping or overflowing elements; and look up styles, shots and render readiness when making a video."
   },
   "nav": "Design library",
   "insert": "Insert into chat"

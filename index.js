@@ -24,6 +24,7 @@ import { fileURLToPath } from 'node:url';
 
 import { buildIndex, cachedIndex, loadSeedIndex, publicEntry } from './lib/scan.js';
 import { buildReview } from './lib/review.js';
+import { checkLayout, formatLayoutReport } from './lib/layout.js';
 import { registerRoutes, searchEntries } from './lib/routes.js';
 import { checkVideoEnvironment } from './lib/videoenv.js';
 import { readSettings, writeSettings } from './lib/settings.js';
@@ -44,6 +45,16 @@ const SEED_ROOT = join(HERE, 'data');
  * it on every search would be pure waste. A failed read returns null rather than
  * throwing: a missing style library should not stop the design tools working.
  */
+let shotCatalogPromise;
+function loadShotCatalog() {
+  if (shotCatalogPromise === undefined) {
+    shotCatalogPromise = readFile(join(SEED_ROOT, 'video-styles', 'shots', 'library.json'), 'utf8')
+      .then((text) => JSON.parse(text))
+      .catch(() => null);
+  }
+  return shotCatalogPromise;
+}
+
 let videoCatalogPromise;
 function loadVideoCatalog() {
   if (videoCatalogPromise === undefined) {
@@ -618,6 +629,161 @@ function toolSpecs({ getIndex }) {
       },
     },
     {
+      name: 'video_shot_search',
+      description: [
+        'Search 124 shot recipe cards — the concrete moves a film is built from, as opposed to the overall',
+        'look a style gives you. Each card states when to use it, how long it runs, its energy level, the',
+        'intention behind it, and a parameter table with the values that actually matter.',
+        '',
+        'Categories: opening (11), typography (22), ui-entrance (21), camera (10), data (5),',
+        'interaction (11), transition (15), rhythm (8), effects (15), outro (6).',
+        '',
+        'Use this when a style alone is not enough — when you know the film should feel a certain way but',
+        'not what happens in a given second. Search by what the shot does, not by what it looks like.',
+      ].join('\n'),
+      parameters: {
+        query: { type: 'string', description: 'Free-text terms; every term must match name, summary, intent or tags.' },
+        category: { type: 'string', description: 'opening | typography | ui-entrance | camera | data | interaction | transition | rhythm | effects | outro' },
+        limit: { type: 'number', description: 'Maximum results, 1-124. Defaults to 10.' },
+      },
+      output: { schema: { type: 'string' }, render: (args, value) => [{ type: 'text', text: value }] },
+      async execute(args) {
+        const index = await getIndex(false);
+        const terms = String(args?.query ?? '').toLowerCase().split(/\s+/).filter(Boolean);
+        const limit = Math.max(1, Math.min(124, Number(args?.limit ?? 10)));
+
+        const cards = index.entries.filter((entry) => entry.kind === 'shot');
+        if (cards.length === 0) {
+          return 'No shot cards are installed. Reinstall the plugin to restore them.';
+        }
+
+        const scored = [];
+        for (const card of cards) {
+          const d = card.document ?? {};
+          if (args?.category !== undefined && args.category !== '' && d.category !== args.category) continue;
+          const haystack = [card.name, d.description, d.use, d.intention, (d.tags ?? []).join(' ')]
+            .join('\n').toLowerCase();
+          if (!terms.every((term) => haystack.includes(term))) continue;
+          let score = 0;
+          for (const term of terms) {
+            if (String(card.name).toLowerCase().includes(term)) score += 30;
+            if ((d.tags ?? []).some((t) => String(t).toLowerCase() === term)) score += 20;
+            score += 1;
+          }
+          scored.push({ card, score });
+        }
+        scored.sort((a, b) => b.score - a.score);
+
+        if (scored.length === 0) {
+          const categories = [...new Set(cards.map((c) => c.document?.category).filter(Boolean))];
+          return `No shot matched ${JSON.stringify(args?.query ?? '')}. Categories: ${categories.join(', ')}.`;
+        }
+
+        const lines = [`${cards.length} shot cards installed; ${scored.length} match.`, ''];
+        for (const { card } of scored.slice(0, limit)) {
+          const d = card.document ?? {};
+          lines.push(`- name: ${card.name}`);
+          lines.push(`  category: ${d.category ?? '—'} · ${d.duration ?? ''} · energy ${d.energy ?? '—'}`);
+          lines.push(`  what: ${d.description ?? ''}`);
+          lines.push(`  use when: ${d.use ?? ''}`);
+        }
+        lines.push('', 'Read one with video_shot_read({ name }).');
+        return lines.join('\n');
+      },
+    },
+    {
+      name: 'video_shot_read',
+      description: [
+        'Read one shot recipe card in full: the intention, the motion core with exact timings and easing,',
+        'a parameter table with the adjustment each value makes, and the known pitfalls for that shot.',
+        '',
+        'This is the document that turns "make it feel premium" into frame numbers.',
+      ].join('\n'),
+      parameters: {
+        name: { type: 'string', required: true, description: 'Card name from video_shot_search, e.g. basic-3d-scene.' },
+      },
+      output: { schema: { type: 'string' }, render: (args, value) => [{ type: 'text', text: value }] },
+      async execute(args) {
+        const name = String(args?.name ?? '').trim();
+        if (name === '') return 'name is required.';
+        const root = join(SEED_ROOT, 'video-styles', 'shots', 'cards');
+
+        // The card sources are filed under references/shots/<category>/<name>.md,
+        // so walk to the matching file rather than assuming one flat folder.
+        const wanted = `${name}.md`;
+        const findIn = async (dir, depth) => {
+          if (depth > 4) return null;
+          let items;
+          try {
+            items = await readdir(dir, { withFileTypes: true });
+          }
+          catch {
+            return null;
+          }
+          for (const item of items) {
+            if (item.isFile() && item.name === wanted) return join(dir, item.name);
+          }
+          for (const item of items) {
+            if (!item.isDirectory()) continue;
+            const found = await findIn(join(dir, item.name), depth + 1);
+            if (found !== null) return found;
+          }
+          return null;
+        };
+
+        const file = await findIn(root, 0);
+        if (file === null) {
+          const catalog = await loadShotCatalog();
+          const names = catalog?.cards?.map((c) => c.name) ?? [];
+          return `Unknown shot "${name}". Try: ${names.slice(0, 15).join(', ')}…`;
+        }
+        return await readFile(file, 'utf8');
+      },
+    },
+    {
+      name: 'video_craft_read',
+      description: [
+        'Read any video method document by id: animation principles, shot planning, story spines, transition',
+        'wording, camera-move checks, Manim reference scenes, and the craft documents shipped with the styles.',
+        '',
+        'Use `design_search` to find the id, then this to read it whole. The documents it returns are the ones',
+        'that answer "how should this move" with numbers — durations, cubic-bezier curves, stagger offsets,',
+        'spring configs — rather than with adjectives.',
+      ].join('\n'),
+      parameters: {
+        id: { type: 'string', required: true, description: 'Entry id from design_search, e.g. video-styles/motion/animation-principles/SKILL.' },
+      },
+      output: { schema: { type: 'string' }, render: (args, value) => [{ type: 'text', text: value }] },
+      async execute(args) {
+        const wanted = String(args?.id ?? '').trim();
+        if (wanted === '') return 'id is required.';
+        const index = await getIndex(false);
+
+        // Accept the exact id, or a path-like suffix so a caller who knows the
+        // folder can skip the search step.
+        const match = index.entries.find((entry) => entry.id === wanted)
+          ?? index.entries.find((entry) => entry.id.endsWith(`/${wanted}`))
+          ?? index.entries.find((entry) => entry.id.includes(wanted));
+
+        if (match === undefined) {
+          const sample = index.entries
+            .filter((entry) => entry.kind === 'craft' || entry.kind === 'video')
+            .slice(0, 12)
+            .map((entry) => entry.id);
+          return `No document matched "${wanted}". Try one of: ${sample.join(', ')}`;
+        }
+        if (/^video-styles\/shots\//.test(match.id)) {
+          return `That is a shot card; read it with video_shot_read({ name: "${match.name}" }).`;
+        }
+        try {
+          return await readFile(match.path, 'utf8');
+        }
+        catch (error) {
+          return `Cannot read ${match.id}: ${String(error?.message ?? error)}`;
+        }
+      },
+    },
+    {
       name: 'video_env_check',
       description: [
         'Check whether this machine can render a video, and say exactly what is missing.',
@@ -660,6 +826,46 @@ function toolSpecs({ getIndex }) {
         }
         if (report.nextStep) lines.push('', `## Next step`, report.nextStep);
         return lines.join('\n');
+      },
+    },
+    {
+      name: 'layout_check',
+      description: [
+        'Find overlapping boxes, elements outside the canvas, and text sitting on text.',
+        '',
+        'It measures rendered boxes in a real browser rather than parsing CSS, because "does this overlap"',
+        'is a question about layout, not about declared styles: padding, negative margins, transforms,',
+        'grid overlap and fixed positioning all change the answer, and a static read gets those wrong.',
+        '',
+        'Pass either a `target` (a file path or URL) or `html` (a snippet). Parent/child pairs are not',
+        'reported as overlap — that is containment, not a collision — so what comes back is the pairs that',
+        'are actually sharing space by accident.',
+      ].join('\n'),
+      parameters: {
+        target: { type: 'string', description: 'File path or http(s) URL to load. Mutually exclusive with html.' },
+        html: { type: 'string', description: 'HTML string to render instead of loading a target.' },
+        viewport: {
+          type: 'object',
+          description: 'Viewport size. Defaults to 1280x900.',
+          properties: { width: { type: 'number' }, height: { type: 'number' } },
+        },
+        padding: { type: 'number', description: 'Tolerance in px before an edge counts as overflow. Defaults to 2.' },
+        minShare: { type: 'number', description: 'A pair counts as overlapping only when the shared area covers this fraction of the smaller box. Defaults to 0.05.' },
+        minOverlapPx: { type: 'number', description: 'Minimum overlap width and height in px. Defaults to 8, which ignores shadows and borders.' },
+        ignore: { type: 'array', items: { type: 'string' }, description: 'CSS selectors to skip, e.g. [".decorative"]' },
+      },
+      output: { schema: { type: 'string' }, render: (args, value) => [{ type: 'text', text: value }] },
+      async execute(args) {
+        const result = await checkLayout({
+          target: args?.target,
+          html: args?.html,
+          viewport: args?.viewport,
+          padding: args?.padding,
+          minShare: args?.minShare,
+          minOverlapPx: args?.minOverlapPx,
+          ignore: args?.ignore,
+        });
+        return formatLayoutReport(result);
       },
     },
   ];

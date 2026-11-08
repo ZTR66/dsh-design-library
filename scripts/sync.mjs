@@ -85,6 +85,24 @@ async function videoDocuments() {
     ['video-styles/styles', 'andyhuo520/vibe-knowledge'],
     ['video-styles/craft', 'xiazhuo123456789/vibe-knowledge-video'],
     ['video-styles/mv', 'Win-Hao/music-mv'],
+    ['video-styles/shots', 'Vincentwei1021/video-shotcraft'],
+    ['video-styles/artmotion', 'alchaincyf/huashu-art-motion'],
+    ['video-styles/index', 'ismoshushi/awesome-opus-video-skills'],
+    ['video-styles/toolkit', 'liangdabiao/video-skills-toolkit'],
+    ['video-styles/remotion/free', 'RenderComp/free-remotion-templates'],
+    ['video-styles/remotion/rve', 'reactvideoeditor/remotion-templates'],
+    ['video-styles/remotion/aliabassi', 'ali-abassi/remotion-templates'],
+    // Wave 3 and 4 — listed before the catch-all so these files are credited to
+    // the repository they came from rather than to this package.
+    ['video-styles/motion', 'iart-ai/motion-design-skills'],
+    ['video-styles/director/baocut', 'jimliu/baocut'],
+    ['video-styles/director/chaojifeng', 'mileson/chaojifeng-video-design'],
+    ['video-styles/director/spark-video', 'modelstudioai/skills'],
+    ['video-styles/director/visual-skills', 'smixs/visual-skills'],
+    ['video-styles/manim', 'G-U-N/vibe-manim'],
+    ['video-styles/varg', 'varghq/skills'],
+    ['video-styles/shader', 'gokayfem/shader-skills'],
+    ['video-styles/reelmimic', 'edenfunf/reelmimic'],
     ['video-styles', 'dsh-design-library'],
   ];
   const out = [];
@@ -97,33 +115,31 @@ async function videoDocuments() {
     out.push(await documentEntry(relPath, repo));
   };
 
-  for (const [rel, repo] of sources) {
+  // Walk each source folder to whatever depth it happens to have. The first
+  // version assumed a fixed two-level shape and silently skipped anything
+  // deeper, so declaring a new top-level folder left its children undeclared.
+  const walk = async (rel, repo, depth) => {
+    if (depth > 8) return;
     const dir = join(DATA_ROOT, rel);
     let names;
     try {
       names = await readdir(dir, { withFileTypes: true });
     }
     catch {
-      continue;
+      return;
     }
     for (const dirent of names) {
-      if (dirent.isFile() && dirent.name.endsWith('.md')) {
-        await add(join(rel, dirent.name), repo);
+      if (dirent.isDirectory()) {
+        await walk(join(rel, dirent.name), repo, depth + 1);
+        continue;
       }
-      else if (dirent.isDirectory() && rel === 'video-styles/styles') {
-        // Only the styles folder nests: <key>/STYLE.md.
-        let inner;
-        try {
-          inner = await readdir(join(dir, dirent.name));
-        }
-        catch {
-          continue;
-        }
-        for (const name of inner.filter((n) => n.endsWith('.md'))) {
-          await add(join(rel, dirent.name, name), repo);
-        }
-      }
+      if (!/\.(md|json|tsx?)$/i.test(dirent.name)) continue;
+      await add(join(rel, dirent.name), repo);
     }
+  };
+
+  for (const [rel, repo] of sources) {
+    await walk(rel, repo, 0);
   }
   return out;
 }
@@ -362,6 +378,175 @@ async function main() {
       description: document.description,
       document,
     });
+  }
+
+  // ---- shot recipe cards --------------------------------------------------
+  //
+  // The cards live in one manifest (`library.json`) with their source documents
+  // beside it. Both are indexed: the manifest gives search a compact record per
+  // shot, and the source documents are what `video_shot_read` returns. Indexing
+  // the manifest separately keeps a 124-card search from reading 124 files.
+  let shotManifest = null;
+  try {
+    shotManifest = JSON.parse(await readFile(join(DATA_ROOT, 'video-styles', 'shots', 'library.json'), 'utf8'));
+  }
+  catch { /* library not fetched */ }
+
+  if (shotManifest !== null && Array.isArray(shotManifest.cards)) {
+    for (const card of shotManifest.cards) {
+      if (typeof card.name !== 'string' || card.name === '') continue;
+      entries.push({
+        id: `video-styles/shots/${card.name}`,
+        kind: 'shot',
+        relPath: `video-styles/shots/library.json#${card.name}`,
+        folder: 'video-styles',
+        repo: 'Vincentwei1021/video-shotcraft',
+        license: 'Apache-2.0',
+        bytes: 0,
+        sha256: createHash('sha256').update(JSON.stringify(card)).digest('hex'),
+        name: card.name,
+        description: card.summary ?? '',
+        document: {
+          name: card.name,
+          description: card.summary ?? '',
+          category: card.category,
+          use: card.use,
+          duration: card.duration,
+          energy: card.energy,
+          intention: card.intention,
+          tags: Array.isArray(card.tags) ? card.tags : [],
+          source: card.source,
+        },
+      });
+    }
+  }
+
+  // ---- art-motion reference documents ------------------------------------
+  //
+  // 35 historical art styles plus the method documents. Indexed as their own
+  // kind so a search for "洞穴壁画" finds the style rather than a design system.
+  const artRoot = join(DATA_ROOT, 'video-styles', 'artmotion');
+  let artFiles = [];
+  try {
+    artFiles = (await readdir(artRoot)).filter((name) => name.endsWith('.md'));
+  }
+  catch { /* not fetched */ }
+
+  for (const name of artFiles.sort()) {
+    let text;
+    try {
+      text = await readFile(join(artRoot, name), 'utf8');
+    }
+    catch { continue; }
+    // The style files are numbered (`01_cave.md`); the rest are method notes.
+    const isStyle = /^\d{2}_/.test(name);
+    const stem = name.replace(/\.md$/, '');
+    const title = /^#\s+(.+)$/m.exec(text)?.[1]?.trim() ?? stem;
+    // First non-heading, non-empty paragraph is the summary.
+    const paragraph = text
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .find((line) => line !== '' && !line.startsWith('#') && !line.startsWith('>') && !line.startsWith('|')) ?? '';
+    entries.push({
+      id: `video-styles/artmotion/${stem}`,
+      kind: isStyle ? 'video' : 'craft',
+      relPath: `video-styles/artmotion/${name}`,
+      folder: 'video-styles',
+      repo: 'alchaincyf/huashu-art-motion',
+      license: 'MIT',
+      bytes: Buffer.byteLength(text, 'utf8'),
+      sha256: createHash('sha256').update(text).digest('hex'),
+      name: title,
+      description: paragraph.slice(0, 400),
+      document: {
+        name: title,
+        description: paragraph.slice(0, 400),
+        artStyle: isStyle,
+      },
+    });
+  }
+
+  // ---- motion skills and director method documents -----------------------
+  //
+  // Two more families of prose rather than specs:
+  //   motion/   nine skills answering "how should this move" with numbers
+  //   director/ shot cards, transition wording, story spines, treatments
+  //
+  // They are indexed as `craft`: they are method, not a look, so they belong in
+  // the same bucket as the camera-grammar documents from the first wave.
+  const craftRoots = [
+    ['motion', 'iart-ai/motion-design-skills'],
+    ['director/baocut', 'jimliu/baocut'],
+    ['director/chaojifeng', 'mileson/chaojifeng-video-design'],
+    ['director/spark-video', 'modelstudioai/skills'],
+    ['director/visual-skills', 'smixs/visual-skills'],
+    ['manim', 'G-U-N/vibe-manim'],
+    ['varg', 'varghq/skills'],
+    ['shader', 'gokayfem/shader-skills'],
+    ['reelmimic', 'edenfunf/reelmimic'],
+  ];
+
+  for (const [rel, repo] of craftRoots) {
+    const root = join(DATA_ROOT, 'video-styles', rel);
+    let names;
+    try {
+      names = await readdir(root, { withFileTypes: true });
+    }
+    catch {
+      continue;
+    }
+    // One level: either documents directly, or one folder per skill.
+    const files = [];
+    for (const dirent of names) {
+      if (dirent.isFile() && dirent.name.endsWith('.md')) {
+        files.push({ rel: join(rel, dirent.name), name: dirent.name });
+      }
+      else if (dirent.isDirectory()) {
+        for (const inner of [`SKILL.md`, `README.md`]) {
+          files.push({ rel: join(rel, dirent.name, inner), name: `${dirent.name}/${inner}`, optional: true });
+        }
+      }
+    }
+    for (const item of files) {
+      const full = join(DATA_ROOT, 'video-styles', item.rel);
+      let text;
+      try {
+        text = await readFile(full, 'utf8');
+      }
+      catch { continue; }
+      const stem = item.rel.replace(/\.md$/, '').split(sep).join('/');
+      const title = /^#\s+(.+)$/m.exec(text)?.[1]?.trim()
+        ?? (() => {
+          const fm = /^---\r?\n([\s\S]*?)\r?\n---/.exec(text);
+          const nm = fm === null ? null : /\bname:\s*(.+)/.exec(fm[1]);
+          return nm === null ? item.name : nm[1].trim();
+        })();
+      const desc = (() => {
+        const fm = /^---\r?\n([\s\S]*?)\r?\n---/.exec(text);
+        if (fm !== null) {
+          const d = /\bdescription:\s*([\s\S]*?)(?:\n\w+:|\n$)/.exec(fm[1]);
+          if (d !== null) return d[1].trim().replace(/^["']|["']$/g, '').slice(0, 400);
+        }
+        const paragraph = text.split(/\r?\n/).map((l) => l.trim())
+          .find((l) => l !== '' && !l.startsWith('#') && !l.startsWith('---') && !l.startsWith('|'));
+        return (paragraph ?? '').slice(0, 400);
+      })();
+      entries.push({
+        id: `video-styles/${stem}`,
+        kind: 'craft',
+        relPath: `video-styles/${item.rel.split(sep).join('/')}`,
+        folder: 'video-styles',
+        repo,
+        license: repo === 'jimliu/baocut' ? 'BaoCut-Community-1.0'
+          : repo === 'smixs/visual-skills' ? 'CC-BY-4.0'
+            : 'MIT',
+        bytes: Buffer.byteLength(text, 'utf8'),
+        sha256: createHash('sha256').update(text).digest('hex'),
+        name: title,
+        description: desc,
+        document: { name: title, description: desc },
+      });
+    }
   }
 
   // The video skill document sits beside the styles it drives. It is a SKILL.md

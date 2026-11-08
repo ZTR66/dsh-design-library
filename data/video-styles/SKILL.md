@@ -58,6 +58,12 @@ better than searching for a look.
 
 Let them choose. A style chosen by the user is worth ten chosen for them.
 
+**Historical art styles.** `data/video-styles/artmotion/` carries 35 more
+visual languages — cave painting, Egyptian, Greek, Roman, Gothic, cubism,
+Bauhaus, pop and so on — each as a numbered document. They are indexed as style
+entries, so `design_search` finds them by name. Use one when the subject has a
+period flavour the 44 base styles cannot reach.
+
 **Prefer 基础档.** The 44 specs mark 38 as 基础 (renders from code alone) and 6
 as 增强 (needs generated imagery). 增强 means an outside image model, an API key,
 and a cost — do not reach for it unless the user asks.
@@ -80,6 +86,32 @@ filter is not a chalkboard film. If the user's request conflicts with 不能改,
 say so and offer a different style rather than quietly breaking the style.
 
 ---
+
+## Step 2b — Turn the style into shots
+
+A style says what the film looks like. It does not say what happens in the next
+four seconds. `video_shot_search` covers that gap with 124 recipe cards, each
+carrying a duration in frames, an energy level, the intention behind the move,
+and a parameter table.
+
+Pick cards by **what the shot does**, not by what it looks like:
+
+| The film needs to | Search |
+|---|---|
+| start | `category: "opening"` — 11 cards |
+| move between ideas | `category: "transition"` — 15 cards |
+| introduce a product surface | `category: "ui-entrance"` — 21 cards |
+| land a number | `category: "data"` — 5 cards |
+| set a title | `category: "typography"` — 22 cards |
+| end | `category: "outro"` — 6 cards |
+
+Then `video_shot_read({ name })` returns the build: exact frame ranges, easing
+curves, a table of which parameter changes what, and the known pitfalls for that
+shot specifically.
+
+**Compose a sequence of cards rather than inventing motion.** A 60-second film is
+eight to twelve cards, not one continuous improvisation. The cards are the
+vocabulary; the order is yours.
 
 ## Step 3 — Decide how it is spoken
 

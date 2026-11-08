@@ -1,7 +1,7 @@
 {
   "name": "@ztr66/dsh-design-library",
-  "version": "0.2.1",
-  "description": "Browse 290 design documents and 44 video styles, register design skills for the agent, check UI against a design system with computed findings, and report exactly what a machine needs to render a code-drawn film.",
+  "version": "0.6.0",
+  "description": "Design and video library for DeepSeek Harness: 716 indexed entries covering 256 design systems, 97 visual styles, 124 shot recipe cards and 204 craft documents, plus computed review, render-environment checks and overlap/overflow detection.",
   "keywords": [
     "dsh",
     "dsh-plugin",
@@ -10,7 +10,21 @@
     "design-system",
     "design-md",
     "skills",
-    "ui"
+    "ui",
+    "video",
+    "motion",
+    "animation",
+    "storyboard",
+    "ffmpeg",
+    "playwright",
+    "remotion",
+    "shot-list",
+    "video-style",
+    "layout-check",
+    "accessibility",
+    "overflow",
+    "overlap",
+    "qa"
   ],
   "license": "MIT",
   "author": "ZTR66",

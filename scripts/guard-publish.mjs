@@ -66,6 +66,26 @@ const VIDEO_STYLE_REPOS = [
   'andyhuo520/vibe-knowledge',
   'xiazhuo123456789/vibe-knowledge-video',
   'Win-Hao/music-mv',
+  'Vincentwei1021/video-shotcraft',
+  'alchaincyf/huashu-art-motion',
+  'ismoshushi/awesome-opus-video-skills',
+  'liangdabiao/video-skills-toolkit',
+  'RenderComp/free-remotion-templates',
+  // The two repositories below declare no license. Only their README and SKILL
+  // documents are copied — never source — and the guard still requires every file
+  // to name a cleared repository, so the exemption is visible here rather than
+  // buried in the fetch script.
+  'reactvideoeditor/remotion-templates',
+  'ali-abassi/remotion-templates',
+  'iart-ai/motion-design-skills',
+  'mileson/chaojifeng-video-design',
+  'jimliu/baocut',
+  'modelstudioai/skills',
+  'smixs/visual-skills',
+  'G-U-N/vibe-manim',
+  'varghq/skills',
+  'gokayfem/shader-skills',
+  'edenfunf/reelmimic',
   'dsh-design-library',   // this package's own skill document
 ];
 
