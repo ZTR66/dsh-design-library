@@ -2,7 +2,7 @@
 
 # A demonstration video, not part of the plugin. The frames alone are 1050 PNGs
 # (~130 MB); the finished MP4 belongs with the release notes, not in the repo.
-video/
+/video/
 scripts/_video_data.json
 
 # Fetched by scripts/fetch-video-*.ps1 from upstream repositories. Reproducible
