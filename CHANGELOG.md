@@ -1,5 +1,51 @@
 # Changelog
 
+## 0.6.1
+
+Makes the library navigable, and fixes the two reasons a model could not reach most of it.
+
+**`video_guide` — the map.** A model that has never seen this library knows it has
+search tools but not what is in them, so it guesses keywords. Add one tool that
+returns the whole catalogue — five design stages in order, 44 styles grouped by
+subject and by family, 124 shot cards grouped by what they do — and guessing stops
+being necessary. `stage`, `topic`, `family` and `shotCategory` narrow it.
+
+**Method documents are indexed now.** The scanner accepted only `DESIGN.md`,
+`SKILL.md`, `STYLE.md` and `*-DESIGN.md`. The craft, motion and toolkit folders hold
+flat files — `structure-bible.md`, `animation-principles.md`, `visual-grammar.md` —
+and none of them matched, so 69 method documents were absent from the index. Styles
+and shot cards still worked, which is why the symptom was "the video looks flat"
+rather than "the library is empty": palette and shot skeletons were reachable, the
+numbers that make motion deliberate were not.
+
+The fix is a second name rule scoped to those folders. Scope matters — the first
+attempt also admitted `varg`, `reelmimic` and `artmotion`, which took the index from
+429 to 1256 entries with 828 craft documents, mostly per-frame source notes. A model
+reading 1200 entries to find `animation-principles` is worse off than one reading 130
+good ones, so the directory list is short: `craft|motion|toolkit|manim|mv`.
+
+**Search scores instead of filtering.** Both search tools required *every* term to
+appear in the same entry. A natural query therefore matched nothing: `高级 质感 界面
+科技` returns 0 hits under AND, 4 under scoring, because each word matches a
+different style. Every matching term now adds score and only entries with no match at
+all are dropped.
+
+**`video_craft_read` resolves invented ids.** A model that has not seen the library
+writes an id from the folder names it finds on disk —
+`video-styles/craft/structure-bible/SKILL` for a document whose real id is
+`video-styles/craft/structure-bible`. The old matcher tried the exact id, a `/wanted`
+suffix and a bare substring, and all three failed on one extra segment. It now
+normalises the path (drop `/SKILL`, unify separators), then falls back to matching the
+last segment, then the document title.
+
+**Better failure message.** The old one listed style ids only, which taught a caller
+nothing about craft documents. It now names a valid id for the right *kind* of
+document and says where ids come from.
+
+Verified against the recorded failures from a real session: `structure-bible` (68
+lines), `animation-principles` (115 lines) and `高级 质感 界面 科技` (4 hits) all
+succeed, and 124 shot cards still resolve.
+
 ## 0.6.0
 
 Adds layout_check: overlap, overflow and text-collision detection.

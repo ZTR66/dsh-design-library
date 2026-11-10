@@ -27,6 +27,7 @@ import { buildReview } from './lib/review.js';
 import { checkLayout, formatLayoutReport } from './lib/layout.js';
 import { registerRoutes, searchEntries } from './lib/routes.js';
 import { checkVideoEnvironment } from './lib/videoenv.js';
+import { videoGuideSpec } from './lib/guide-tool.js';
 import { readSettings, writeSettings } from './lib/settings.js';
 import { EXTERNAL } from './sources.js';
 
@@ -325,6 +326,7 @@ function compileTool(spec) {
 
 function toolSpecs({ getIndex }) {
   return [
+    videoGuideSpec({ loadVideoCatalog, loadShotCatalog }),
     {
       name: 'design_search',
       description: [
@@ -529,7 +531,11 @@ function toolSpecs({ getIndex }) {
         if (catalog === null) {
           return 'The video style library is missing from this installation. Reinstall the plugin.';
         }
-        const terms = String(args?.query ?? '').toLowerCase().split(/\s+/).filter(Boolean);
+        // Scoring, not filtering. The previous version required every term to appear
+        // (`terms.every`), so a natural multi-word query like "高级 质感 界面 科技"
+        // returned nothing even though each word matched a different style. Scoring
+        // ranks partial matches instead of discarding them.
+        const terms = String(args?.query ?? '').toLowerCase().split(/[\s,，、]+/).filter(Boolean);
         const limit = Math.max(1, Math.min(44, Number(args?.limit ?? 12)));
 
         const scored = [];
@@ -538,14 +544,19 @@ function toolSpecs({ getIndex }) {
           if (args?.tier !== undefined && args.tier !== '' && style.tier !== args.tier) continue;
           const haystack = [style.name, style.en, style.one, style.fit, style.fam, style.cat, (style.keywords ?? []).join(' ')]
             .join('\n').toLowerCase();
-          if (!terms.every((term) => haystack.includes(term))) continue;
           let score = 0;
+          let hits = 0;
           for (const term of terms) {
+            if (!haystack.includes(term)) continue;
+            hits += 1;
             if (String(style.name ?? '').toLowerCase().includes(term)) score += 30;
             if ((style.keywords ?? []).some((k) => String(k).toLowerCase() === term)) score += 20;
             else if ((style.keywords ?? []).some((k) => String(k).toLowerCase().includes(term))) score += 8;
+            if (String(style.fit ?? '').toLowerCase().includes(term)) score += 10;
             score += 1;
           }
+          // A style must match at least one term — OR across terms, not AND.
+          if (terms.length > 0 && hits === 0) continue;
           scored.push({ style, score });
         }
         scored.sort((a, b) => b.score - a.score);
@@ -649,7 +660,7 @@ function toolSpecs({ getIndex }) {
       output: { schema: { type: 'string' }, render: (args, value) => [{ type: 'text', text: value }] },
       async execute(args) {
         const index = await getIndex(false);
-        const terms = String(args?.query ?? '').toLowerCase().split(/\s+/).filter(Boolean);
+        const terms = String(args?.query ?? '').toLowerCase().split(/[\s,，、]+/).filter(Boolean);
         const limit = Math.max(1, Math.min(124, Number(args?.limit ?? 10)));
 
         const cards = index.entries.filter((entry) => entry.kind === 'shot');
@@ -657,19 +668,26 @@ function toolSpecs({ getIndex }) {
           return 'No shot cards are installed. Reinstall the plugin to restore them.';
         }
 
+        // Scoring, not filtering — same reason as video_style_search: a query
+        // like "grid 网格 干涉 摩尔纹 扫描 线" never has every word in one card,
+        // so AND returned nothing. Each matching term now adds score.
         const scored = [];
         for (const card of cards) {
           const d = card.document ?? {};
           if (args?.category !== undefined && args.category !== '' && d.category !== args.category) continue;
-          const haystack = [card.name, d.description, d.use, d.intention, (d.tags ?? []).join(' ')]
+          const haystack = [card.name, d.description, d.use, d.intention, d.category, (d.tags ?? []).join(' ')]
             .join('\n').toLowerCase();
-          if (!terms.every((term) => haystack.includes(term))) continue;
           let score = 0;
+          let hits = 0;
           for (const term of terms) {
+            if (!haystack.includes(term)) continue;
+            hits += 1;
             if (String(card.name).toLowerCase().includes(term)) score += 30;
             if ((d.tags ?? []).some((t) => String(t).toLowerCase() === term)) score += 20;
+            if (String(d.use ?? '').toLowerCase().includes(term)) score += 12;
             score += 1;
           }
+          if (terms.length > 0 && hits === 0) continue;
           scored.push({ card, score });
         }
         scored.sort((a, b) => b.score - a.score);
@@ -759,18 +777,69 @@ function toolSpecs({ getIndex }) {
         if (wanted === '') return 'id is required.';
         const index = await getIndex(false);
 
-        // Accept the exact id, or a path-like suffix so a caller who knows the
-        // folder can skip the search step.
+        // Resolve an id written several plausible ways.
+        //
+        // A model that has not seen this library invents an id shape from the
+        // folder names on disk — `video-styles/craft/structure-bible/SKILL` for a
+        // document whose real id is `video-styles/something/structure-bible`. The
+        // old matching only tried the exact id, a `/wanted` suffix and a bare
+        // substring, so a path with one extra segment failed all three and the
+        // reader gave up rather than reformulating.
+        //
+        // The additions are ordered from strict to loose: an exact id still wins,
+        // and a name match only applies when the caller clearly aimed at a
+        // section that exists.
+        const craftLike = index.entries.filter(
+          (entry) => entry.kind === 'craft' || entry.kind === 'video',
+        );
+        const normalise = (value) => String(value ?? '')
+          .toLowerCase()
+          .replace(/\\/g, '/')
+          .replace(/\/skill\.md$/i, '')
+          .replace(/\/skill$/i, '')
+          .replace(/\/design\.md$/i, '')
+          .replace(/\/+$/, '');
+        const wantedNorm = normalise(wanted);
+        const wantedSegments = wantedNorm.split('/').filter(Boolean);
+
         const match = index.entries.find((entry) => entry.id === wanted)
-          ?? index.entries.find((entry) => entry.id.endsWith(`/${wanted}`))
-          ?? index.entries.find((entry) => entry.id.includes(wanted));
+          ?? index.entries.find((entry) => normalise(entry.id) === wantedNorm)
+          ?? index.entries.find((entry) => normalise(entry.id).endsWith('/' + wantedNorm))
+          ?? index.entries.find((entry) => normalise(entry.id).includes(wantedNorm))
+          // A guessed path usually has the right last segment: match on the
+          // document's own folder name regardless of where it sits.
+          ?? craftLike.find((entry) => {
+            const last = wantedSegments[wantedSegments.length - 1];
+            return last !== undefined && last !== '' && normalise(entry.id).endsWith('/' + last);
+          })
+          // The id was guessed but the title is right — let the name decide.
+          ?? craftLike.find((entry) => {
+            const nameSeg = String(entry.name ?? '').toLowerCase().replace(/\s+/g, '-');
+            return nameSeg !== '' && wantedNorm.includes(nameSeg);
+          });
 
         if (match === undefined) {
-          const sample = index.entries
-            .filter((entry) => entry.kind === 'craft' || entry.kind === 'video')
-            .slice(0, 12)
+          // Say what a valid id looks like for THIS kind of document. Listing
+          // only style ids taught a caller nothing about craft documents.
+          const craftSample = craftLike
+            .filter((entry) => entry.kind === 'craft')
+            .slice(0, 6)
             .map((entry) => entry.id);
-          return `No document matched "${wanted}". Try one of: ${sample.join(', ')}`;
+          const videoSample = craftLike
+            .filter((entry) => entry.kind === 'video')
+            .slice(0, 4)
+            .map((entry) => entry.id);
+          const hints = [];
+          if (craftSample.length > 0) hints.push(`craft documents: ${craftSample.join(', ')}`);
+          if (videoSample.length > 0) hints.push(`style documents: ${videoSample.join(', ')}`);
+          return [
+            `No document matched "${wanted}".`,
+            '',
+            'Ids come from design_search, not from folder paths on disk:',
+            ...hints.map((line) => '- ' + line),
+            '',
+            'Call design_search({ kind: \'skill\' }) to list what is available.',
+          ].join('\n');
         }
         if (/^video-styles\/shots\//.test(match.id)) {
           return `That is a shot card; read it with video_shot_read({ name: "${match.name}" }).`;
