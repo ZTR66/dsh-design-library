@@ -876,6 +876,13 @@ function toolSpecs({ getIndex }) {
         const lines = [
           `# Video environment — ${report.platform}`,
           '',
+          // The description says this is not the first step; the output has to say
+          // it too, because the model reads the result far more attentively than
+          // the spec it agreed to before calling.
+          '> This is a capability report, not a plan. If the style, the structure or the shots are not',
+          '> decided yet, call `video_guide` — it carries the production protocol and the library map.',
+          '> Check the environment once you know what you are building.',
+          '',
         ];
         for (const [group, items] of Object.entries(report.groups)) {
           lines.push(`## ${group}`);
