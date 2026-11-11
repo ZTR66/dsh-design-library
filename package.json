@@ -1,6 +1,6 @@
 {
   "name": "@ztr66/dsh-design-library",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Design and video library for DeepSeek Harness: 716 indexed entries covering 256 design systems, 97 visual styles, 124 shot recipe cards and 204 craft documents, plus computed review, render-environment checks and overlap/overflow detection.",
   "keywords": [
     "dsh",
