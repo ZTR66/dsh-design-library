@@ -601,11 +601,21 @@ function toolSpecs({ getIndex }) {
 
         if (part === 'spec') {
           const index = await getIndex(false);
-          const entry = index.entries.find((e) => e.kind === 'video' && (e.id.endsWith(`/${key}/STYLE`) || e.id === key));
+            // 库内风格的 id 以 /STYLE 结尾（video-styles/styles/aurora/STYLE）；
+            // 外部风格是单文件，id 就是文件名（video-styles/styles-external/claymation）。
+            // 只认 /STYLE 会让 guide 里列出的 22 个外部风格一个都读不到。
+            const entry = index.entries.find((e) => e.kind === 'video' && (
+              e.id.endsWith(`/${key}/STYLE`)
+              || e.id === key
+              || e.id.endsWith(`/styles-external/${key}`)
+            ));
           if (entry === undefined) {
             const catalog = await loadVideoCatalog();
             const keys = catalog?.styles?.map((s) => s.key) ?? [];
-            return `Unknown style "${key}". Try: ${keys.slice(0, 20).join(', ')}…`;
+              const external = index.entries
+                .filter((e) => e.kind === 'video' && e.id.includes('/styles-external/'))
+                .map((e) => e.id.split('/').pop());
+            return `Unknown style "${key}". Try: ${[...keys.slice(0, 20), ...external.slice(0, 10)].join(', ')}…`;
           }
           let content;
           try {
@@ -616,7 +626,9 @@ function toolSpecs({ getIndex }) {
           }
           const d = entry.document;
           const head = [
-            `<!-- ${entry.name} · ${d.family ?? ''} · ${d.tier ?? ''} -->`,
+              // 外部风格没有 family，tier 是「外部」；头部也要能读出信息，
+              // 否则就是一行空的 <!-- name ·  ·  -->。
+              `<!-- ${entry.name}${d.family ? ` · ${d.family}` : ""}${d.tier ? ` · ${d.tier}` : ""}${entry.id.includes("/styles-external/") ? " · 来源 carl-motion (MIT)" : ""} -->`,
             d.colors ? `<!-- palette: ${d.colors.join(' ')} -->` : '',
             '',
           ].filter(Boolean);

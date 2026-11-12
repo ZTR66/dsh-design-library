@@ -1,6 +1,6 @@
 {
  "schema": "dsh-design-library/seed/v1",
- "generatedAt": "2026-11-10T17:25:33.241Z",
+ "generatedAt": "2026-11-12T13:47:53.144Z",
  "bundledSources": [
   {
    "dir": "voltagent-awesome-design-md",
@@ -120,7 +120,7 @@
   }
  ],
  "duplicateCount": 128,
- "totalBytes": 17226333,
+ "totalBytes": 17324566,
  "documents": [
   {
    "path": "data/voltagent-awesome-design-md/design-md/1win/DESIGN.md",
@@ -13076,8 +13076,204 @@
    "path": "data/video-styles/craft/production-protocol.md",
    "repo": "dsh-design-library",
    "license": "MIT",
-   "sha256": "cef41812d6416abd6faeb9533b48f89f1fb5c5da4aa048f35abf76c6f5d0481c",
-   "bytes": 16387
+   "sha256": "19cc76e5bf26163974832b92b75e196888929b4e3b7a7ae2f893eff68e8456ff",
+   "bytes": 19840
+  },
+  {
+   "path": "data/video-styles/styles-external/ascii-crt.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "7e89ac498f90f90e789b4c4338276b423458b2d3d95d6f4de8dba78abeda84cd",
+   "bytes": 2203
+  },
+  {
+   "path": "data/video-styles/styles-external/brick-toy.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "6b6b3901037253e4fc2bc66fa70a7765a1a1ee7fde832cb77aec07e11c485aea",
+   "bytes": 2143
+  },
+  {
+   "path": "data/video-styles/styles-external/claymation.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "53621145b150b7e767f4570b174e09f6e0c72188d9f2b99d8c3f9707230ba35d",
+   "bytes": 2079
+  },
+  {
+   "path": "data/video-styles/styles-external/editorial-dataviz.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "0d154123e8394ed84ff56a3b2e6a3376a5d78539dbe254201ab231aad61080b9",
+   "bytes": 2156
+  },
+  {
+   "path": "data/video-styles/styles-external/egyptian-mural.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "96e33a7cfc1aaba2f73e34ea6920660041fda96e71e2eb46583bf07b0d0e3e4d",
+   "bytes": 2288
+  },
+  {
+   "path": "data/video-styles/styles-external/exploded-view.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "264257c6cce13a3f61da71e687134886d842bbc59e66c7ba3a57bc0ca1b603cf",
+   "bytes": 2160
+  },
+  {
+   "path": "data/video-styles/styles-external/feature-3d-character.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "94746426fecfb2fcdee0e94051192e3a11b57e70a13d4f8a0afcd9c872f7c5eb",
+   "bytes": 2269
+  },
+  {
+   "path": "data/video-styles/styles-external/flat-vector.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "dbcf0f078b682d529ec24ed90c6aeb5a541bf71bdca6fe154ae48506200654e2",
+   "bytes": 2173
+  },
+  {
+   "path": "data/video-styles/styles-external/glassmorphism-ui.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "35b03004d5ff9f7121356d353960310f831478bdd26fc5221c55d109f652fed5",
+   "bytes": 2158
+  },
+  {
+   "path": "data/video-styles/styles-external/hand-drawn-notes.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "b1c07b3e868ff635d8ff7c312207fe6d1e57bfad52eec89c8ca328ad60f4ac50",
+   "bytes": 2045
+  },
+  {
+   "path": "data/video-styles/styles-external/isometric-world.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "5b25893d08e286efbbe81d80ed51cc59fef17ef892eac0c784fd6b6f9d20346c",
+   "bytes": 2172
+  },
+  {
+   "path": "data/video-styles/styles-external/monet-impressionist.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "a24c70801a4260efaae9cab452f0b6bd0a3a7491e0fa823d6120164b83e6a40a",
+   "bytes": 2296
+  },
+  {
+   "path": "data/video-styles/styles-external/particle-morph.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "9235844f8c4466fb1fe91b5d321f3a77e6e62585f0ae0ecef1b43fd3851ad452",
+   "bytes": 2150
+  },
+  {
+   "path": "data/video-styles/styles-external/point-cloud-survey.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "6d9a95cc9d2fa6e12686939c1ae8637a3db50071687300cfb9805427cdf2c13b",
+   "bytes": 2304
+  },
+  {
+   "path": "data/video-styles/styles-external/product-ui-2-5d.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "95f8276a24e6383a991b231cf5faac9577c414bb3cd0c69876cb827728849fab",
+   "bytes": 2127
+  },
+  {
+   "path": "data/video-styles/styles-external/psychedelic-shader.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "61f709abd00c8086e1e7c42f1487343ec217e5295c223beb2ba63d782a6674c3",
+   "bytes": 2194
+  },
+  {
+   "path": "data/video-styles/styles-external/scifi-hud.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "4a7f24b92ec48fb0eb4fa74f34795de2dd42afa57d396bca5c11a306d268c2d9",
+   "bytes": 2124
+  },
+  {
+   "path": "data/video-styles/styles-external/soft-inflatable-3d.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "039f0d05cfc03e9060e3771d5517279ed23b4f713c21cd304f7d8ce8ce8f7672",
+   "bytes": 2103
+  },
+  {
+   "path": "data/video-styles/styles-external/sticker-explainer.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "9ef06c16f2613d3dcd714d34be83dc46607fd641a6b9fc7a70398a993c3ec6d2",
+   "bytes": 2257
+  },
+  {
+   "path": "data/video-styles/styles-external/van-gogh-impasto.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "69b7dfaf4e8e778629701726925d7d00cc72096c2b7136a0c1a648d93ab91836",
+   "bytes": 2336
+  },
+  {
+   "path": "data/video-styles/styles-external/watercolor.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "0ff52301e235c137d55560679a0501d48056a37661b164c656a3541bf0a174cf",
+   "bytes": 2204
+  },
+  {
+   "path": "data/video-styles/styles-external/white-model-projection.md",
+   "repo": "LearnPrompt/carl-motion",
+   "license": "MIT",
+   "sha256": "67411b3fced2730dd5955bacec9bb37035da1a0ba130948556fb458761dfaa1b",
+   "bytes": 2279
+  },
+  {
+   "path": "data/video-styles/methods-external/atmosphere-prefabs.md",
+   "repo": "kennywu411-dev/video-pacing",
+   "license": "MIT",
+   "sha256": "7a8eb11d049a97a63f7308e4f3c99cfcf52a670909abc2ae548def93f349b83f",
+   "bytes": 7772
+  },
+  {
+   "path": "data/video-styles/methods-external/camera-move-library.md",
+   "repo": "kennywu411-dev/video-pacing",
+   "license": "MIT",
+   "sha256": "547c33390b97691ac3f6808fc93b11222de6d2600e00405429eb3415746dfdd4",
+   "bytes": 10344
+  },
+  {
+   "path": "data/video-styles/methods-external/genre-camera-sop.md",
+   "repo": "kennywu411-dev/video-pacing",
+   "license": "MIT",
+   "sha256": "9eeae69c5be2d0e5a78dcbb5fae1a1bc20e3ef4e1cea8758b8686a9812a2c465",
+   "bytes": 10705
+  },
+  {
+   "path": "data/video-styles/methods-external/negative-prompts.md",
+   "repo": "kennywu411-dev/video-pacing",
+   "license": "MIT",
+   "sha256": "7bcd34f8fe785156b0368072f56dc374c0309c99ff1298aa0dda27c8d4b6ba06",
+   "bytes": 7791
+  },
+  {
+   "path": "data/video-styles/methods-external/project-planner.md",
+   "repo": "kennywu411-dev/video-pacing",
+   "license": "MIT",
+   "sha256": "d76be74d74cffc6e87bf3c7172c955186b84b7b0d146a5b1fc19301a18318b9b",
+   "bytes": 5098
+  },
+  {
+   "path": "data/video-styles/methods-external/video-pacing.md",
+   "repo": "kennywu411-dev/video-pacing",
+   "license": "MIT",
+   "sha256": "b2b911578dbb2237a62074c90d2798b8274b80ffef5119189458682058e64999",
+   "bytes": 3272
   }
  ]
 }

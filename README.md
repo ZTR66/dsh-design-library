@@ -2,7 +2,7 @@
 
 A design library plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): **browse specs, review UI, and make video** — three jobs sharing one searchable library.
 
-622 indexed entries — 269 design documents, 44 visual styles, 124 shot recipe cards, 70 craft documents, and 115 design skills. Searchable, readable in full, insertable into a conversation, and callable from the review and video tools.
+650 indexed entries — 269 design documents, 66 visual styles, 124 shot recipe cards, 76 craft documents, and 115 design skills. Searchable, readable in full, insertable into a conversation, and callable from the review and video tools.
 
 ## What it does
 
@@ -44,7 +44,7 @@ Added in 0.3.0. The plugin **does not render video** — ffmpeg and a headless b
 
 **Seeing the whole library first.** `video_guide` arrived in 0.6.1. Call it before searching anything: it returns the five design stages in order (subject → style → structure → shots → motion), the 44 styles grouped both by subject and by family, and the 124 shot cards grouped by what they do. Search tools only answer a question you already know how to ask — a model that has never seen this library guesses keywords instead, and a guessed multi-word query usually returns nothing. One recorded session failed four of nine calls exactly that way.
 
-**Choosing the visual language.** 44 styles, each with exact hex values, fonts, motion timing, camera grammar, and three lists: safe to change / changes the flavour / must not change. For example `粉笔黑板` (chalkboard):
+**Choosing the visual language.** 66 styles, each with exact hex values, fonts, motion timing, camera grammar, and three lists: safe to change / changes the flavour / must not change. For example `粉笔黑板` (chalkboard):
 
 ```
 palette: board #1F4A42 · white chalk #EEECE3 · yellow chalk #F5D76E · pink chalk #F28B82
@@ -54,7 +54,7 @@ changes the flavour: text appearing all at once (loses the writing-on-board feel
 
 **Knowing what happens next second.** 124 shot recipe cards, each stating its use, duration to the frame, energy level, directorial intention, a parameter table, and the pitfall specific to that shot. Not "add a premium transition" but "flights 36–64 / 96–128 / 158–190 frames, asymmetric in-out `bezier(0.62,0,0.16,1)`".
 
-**Looking up actual numbers.** 70 craft documents are now indexed (0.6.1): animation principles (durations, easing curves, stagger offsets, spring configs), narrative structure, sound design, kinetic typography, data motion, transitions. Before 0.6.1 the index accepted only `DESIGN.md`, `SKILL.md` and `STYLE.md`, so every flat method document such as `structure-bible.md` and `animation-principles.md` was silently absent — the styles and shot cards worked, but the two layers that make motion feel deliberate were unreachable.
+**Looking up actual numbers.** 76 craft documents are now indexed: animation principles (durations, easing curves, stagger offsets, spring configs), narrative structure, sound design, kinetic typography, data motion, transitions. Before 0.6.1 the index accepted only `DESIGN.md`, `SKILL.md` and `STYLE.md`, so every flat method document such as `structure-bible.md` and `animation-principles.md` was silently absent — the styles and shot cards worked, but the two layers that make motion feel deliberate were unreachable.
 
 **Environment self-check.** `video_env_check` reports what this machine can do, what is missing, and the exact command to fix it. It grades by deliverable rather than one ready flag:
 
@@ -100,8 +100,8 @@ Requires DSH `>=0.2.0-rc.1` and Node 20+.
 
 | Tool | What it does |
 | --- | --- |
-| `video_guide` | **Start here.** The whole library as a map: five design stages, 44 styles by subject and family, 124 shot cards by category. Pass `stage`, `topic`, `family` or `shotCategory` to narrow it |
-| `video_style_search` | 44 visual styles, filtered by topic keyword or family |
+| `video_guide` | **Start here.** The whole library as a map: five design stages, 66 styles by subject and family, 124 shot cards by category. Pass `stage`, `topic`, `family` or `shotCategory` to narrow it |
+| `video_style_search` | 66 visual styles, filtered by topic keyword or family |
 | `video_style_read` | Read one style spec, or a craft document |
 | `video_shot_search` | 124 shot cards, by category (opening / typography / transition / data / outro…) or function |
 | `video_shot_read` | Read one card in full: frame numbers, curves, parameter table, pitfalls |

@@ -86,6 +86,9 @@ const VIDEO_STYLE_REPOS = [
   'varghq/skills',
   'gokayfem/shader-skills',
   'edenfunf/reelmimic',
+  'LearnPrompt/carl-motion',  // MIT; 29 motion styles, prompts and previews
+  'kennywu411-dev/video-pacing',  // MIT; short-video pacing rules
+  'jnMetaCode/ai-shortfilm-prompts',  // MIT; camera-move library and genre SOPs
   'dsh-design-library',   // this package's own skill document
 ];
 
