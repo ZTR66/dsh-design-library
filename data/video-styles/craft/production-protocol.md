@@ -548,17 +548,95 @@ video_env_check()      渲染能力（本插件自带）
 
 ---
 
-### 阶段 8 · 写代码（0 次设计库调用）
+### 阶段 8 · 选路线并写代码（0 次设计库调用）
 
-现在参数齐了，写渲染脚本。
+现在参数齐了，先选渲染路线，再写代码。**两条路线的方法论部分完全一样**——色板、结构、运镜、节奏、动效参数全部照用——不同的只有第 8–10 步的工程实现。
 
-**关键**：
+#### 怎么选
+
+| 需求 | 路线 |
+|---|---|
+| 纯代码画图形（几何、图表、文字动画） | **Canvas + Playwright**（默认） |
+| 要剪辑真实视频/音频素材、逐字对轴字幕 | **Remotion** |
+| 文字排版多，需要自动测量/适配 | **Remotion**（自带文本测量） |
+| 参数化模板（改几个字段出一期新片） | **Remotion**（schema + Studio） |
+| 零依赖、不想装 771 MB | **Canvas** |
+
+**默认选 Remotion。** 它在文本测量、转场系统、音视频合成、参数化模板上都比 Canvas 省事得多，而这些是多数片子的实际工作量所在。
+
+**只有「纯代码画几何/图表/极简文字动画」这一类**——不需要剪辑素材、不需要文字自动测量、不需要批量出片——才退回 Canvas，因为它零依赖、起手快、渲得更快（实测 9.1 秒 vs 15.3 秒）。
+
+**换回 Canvas 要写理由。** 不要因为「怕装依赖」就退回 Canvas——771 MB 是一次性成本，省下的开发时间每次都在赚。
+
+#### 两条路线的实测差异
+
+同一份内容（40 个旋转方块 + 120 个轨道点 + 两行文字，1920×1080，4 秒 120 帧）在这台机器上实测：
+
+| | Canvas + Playwright | Remotion |
+|---|---|---|
+| 串行渲染 | **11.2 秒**（93 ms/帧） | 15.3 秒（128 ms/帧） |
+| 4 并发 | **9.1 秒**（56 ms/帧） | 15.6 秒（并发无效） |
+| 依赖体积 | 0 MB（复用已有 playwright） | 771 MB |
+| 其中私有浏览器 | — | 303 MB |
+| 产物大小 | 1.19 MB | 1.84 MB |
+
+**Canvas 快 37%，且能靠并发再快 19%。Remotion 的并发在这台 8 核机器上没有改善**——它的瓶颈在打包和逐帧 React 序列化，不在并行度。
+
+**但这个比较不等于「Canvas 更好」。** Remotion 慢的那 4 秒换掉的是开发时间：文本自动测量、音视频合成、转场系统、参数化模板，这些在 Canvas 上都要手写。
+
+#### Canvas 路线怎么写
+
+```
+render.mjs
+  playwright 打开页面
+  for 每一帧:
+    page.evaluate(t => window.renderAt(t), t)
+    page.screenshot({ clip: {x:0,y:0,width,height} })
+  ffmpeg -framerate N -i f%05d.png -c:v libx264 ...
+```
+
+**要点**：
+
+- 画面必须是 `t` 的**纯函数**——`window.renderAt(t)` 里不能有 `Math.random()`，随机要带种子
+- 屏幕截图必须 `clip` 到画布尺寸，否则截到整个视口
+- 并发靠开多个 page 分摊帧区间，实测从 93 降到 56 ms/帧
+
+#### Remotion 路线怎么写
+
+```
+npx create-video@latest --yes --blank
+npx remotion studio            # 预览（Agent 环境加 --no-open）
+npx remotion render src/Root.tsx <CompositionId> out.mp4
+```
+
+**要点**（来自 `remotion-track.md` 的对照表）：
+
+- `useCurrentFrame()` + `useVideoConfig().fps` 换算秒，**不许写死 30**
+- `interpolate` 两端必须 `extrapolateLeft/Right: "clamp"`
+- **CSS `transition` / `animation` / Tailwind 动画类一律禁用**——它们不随帧号渲染，输出会错
+- 缩放动画加 `output: "perceptual-scale"`
+- 禁止 `Math.random()`，用带种子的发生器放在模块顶层
+- `TransitionSeries` 的转场时长会**缩短**总时长，编排时要计入
+
+**装之前先知道成本**：`npm i @remotion/cli` 会拉 247 个包、占 771 MB，其中 303 MB 是它自己下的 `chrome-headless-shell`（不复用你已有的 playwright chromium）。
+
+**Windows 上有个坑**：如果系统 TEMP 目录权限受限，渲染会在 `pre-encode.mp4: Permission denied` 处失败。把 `TMP` / `TEMP` 指到项目内目录即可。
+
+#### 写代码时的共同约束
 
 - 用阶段 3 的色板，不要自己调色
 - 用阶段 5 的帧数和曲线，不要自己估
 - 用阶段 6 的缓动，不要写 `ease-in-out`
+- **按阶段 9 的要求分段产出**，不要写一个一次出整片的脚本
 
 **确认模式下不再打断**，直到成品。
+
+**违反判定**：
+
+- 选了 Remotion 但没有理由（Canvas 能满足的需求不该引 771 MB 依赖）
+- Remotion 代码里出现 CSS transition/animation
+- 出现 `Math.random()`（两条路线都不允许）
+- 写出一个直接产出整片 MP4 的脚本，没有单段文件
 
 ---
 
@@ -619,7 +697,7 @@ ffprobe：总时长 = 各段时长之和？
 | 6 取动效 | 1 | 12-13 |
 | 6.5 查节奏 | 1 | 13-14 |
 | 7 查环境 | 2 | 15-16 |
-| 8 写代码 | 0 | 15-16 |
+| 8 选路线并写代码 | 0 | 15-16 |
 | 9 分段渲染+验收 | 1-2（每段 1 次校验） | 16-18 |
 | 10 拼接 | 0 | 16-18 |
 
@@ -644,6 +722,7 @@ ffprobe：总时长 = 各段时长之和？
 - [ ] **读过 `camera-move-library`，每个段落标了运镜意图并写了为什么**
 - [ ] **读过 `video-pacing`，分镜表有事件时刻表，最大间隔 ≤ 3 秒**
 - [ ] 每个缓动能追溯到 `animation-principles`
+- [ ] **渲染路线有明确理由**（Canvas 能满足就不引 Remotion 的 771 MB 依赖）
 - [ ] 渲染产出的是多个单段文件，不是一次性整片
 - [ ] 每段渲染完立刻验收（ffprobe + 首末 2 帧）
 - [ ] 发现问题只重渲那一段，没有全片重来
@@ -665,6 +744,6 @@ ffprobe：总时长 = 各段时长之和？
 | 骨架选哪个 | A/B/C/D 都可能是对的，取决于内容 |
 | 每段用哪张卡 | 同样的段落目标有不同的表达方式 |
 | 节奏快慢 | 取决于题材和平台 |
-| 用什么技术栈 | Canvas / Remotion / ffmpeg 都行 |
+| 用什么技术栈 | Canvas / Remotion / ffmpeg 都行，阶段 8 给了选择依据 |
 
 **规程只管「必须看过、必须能追溯、不能瞎编」。**

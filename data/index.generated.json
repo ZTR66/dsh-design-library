@@ -120,7 +120,7 @@
   }
  ],
  "duplicateCount": 128,
- "totalBytes": 17324566,
+ "totalBytes": 17328824,
  "documents": [
   {
    "path": "data/voltagent-awesome-design-md/design-md/1win/DESIGN.md",
@@ -13076,8 +13076,8 @@
    "path": "data/video-styles/craft/production-protocol.md",
    "repo": "dsh-design-library",
    "license": "MIT",
-   "sha256": "19cc76e5bf26163974832b92b75e196888929b4e3b7a7ae2f893eff68e8456ff",
-   "bytes": 19840
+   "sha256": "edf13030cd7d5305c3ee388f6edd9c621be385f3e3727c7bfc5f0358a3f4493c",
+   "bytes": 24098
   },
   {
    "path": "data/video-styles/styles-external/ascii-crt.md",

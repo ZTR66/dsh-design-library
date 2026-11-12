@@ -1,5 +1,47 @@
 # Changelog
 
+## 0.7.2
+
+Names the render route, and makes Remotion the default.
+
+The protocol used to stop at "write the rendering script" and leave the choice of
+framework to the caller. Two routes were equally supported and neither was
+described, so the route got picked by habit rather than by fit.
+
+**A measured comparison, in the protocol.** Same content (40 rotating bars, 120
+orbiting dots, two lines of text; 1920x1080, 4 s at 30 fps) on this machine:
+
+| | Canvas + Playwright | Remotion |
+|---|---|---|
+| serial | **11.2 s** (93 ms/frame) | 15.3 s (128 ms/frame) |
+| 4 workers | **9.1 s** (56 ms/frame) | 15.6 s (no change) |
+| dependencies | 0 MB (reuses existing playwright) | 771 MB |
+| of which private browser | — | 303 MB |
+| output | 1.19 MB | 1.84 MB |
+
+Canvas is 37% faster and its parallelism works; Remotion's does not, because its
+bottleneck is bundling and per-frame React serialisation rather than core count.
+
+**Remotion is still the default.** It buys text measurement, a transition system,
+audio/video compositing and parameterised templates — the work that dominates
+most films. The 4 s penalty is paid every render; the development time saved is
+paid back every edit. Canvas stays the fallback for pure geometry, charts and
+minimal type, and falling back now needs a stated reason, because "avoid the
+dependency" is not one: 771 MB is a one-time cost.
+
+**`video_env_check` reports the route.** A new `remotion` group probes both the
+package and `@remotion/cli` — having the library without the CLI is enough to
+write a composition and not enough to produce an MP4, so they fail
+independently. Absent is reported as `optional` with an install command, not as
+MISSING: the Canvas route is still valid, and a hard requirement would force an
+install for films that do not need it.
+
+**A Windows trap found while measuring.** If the system TEMP directory is
+permission-restricted, Remotion fails mid-render at `pre-encode.mp4: Permission
+denied`. Pointing `TMP`/`TEMP` at a project-local directory fixes it. That is now
+in the protocol's Remotion section, because the error names neither the cause nor
+the workaround.
+
 ## 0.7.1
 
 Makes the method library reachable, and puts two of its documents on the critical path.

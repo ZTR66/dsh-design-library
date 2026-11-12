@@ -85,6 +85,26 @@ dsh plugin --profile <your profile> add @ztr66/dsh-design-library
 
 Requires DSH `>=0.2.0-rc.1` and Node 20+.
 
+## Two rendering routes
+
+The methodology — palette, structure, camera, rhythm, easing — is independent of
+the renderer. Two implementations are supported:
+
+| | Canvas + Playwright | Remotion |
+|---|---|---|
+| Dependencies | 0 MB (reuses an existing Playwright install) | 771 MB |
+| Speed, measured | 11.2 s serial, 9.1 s at 4 workers | 15.3 s, no gain from workers |
+| Text measurement | hand-rolled | built in |
+| Transitions, A/V compositing | hand-rolled | built in |
+| Parameterised templates | — | built in |
+
+Measured on identical content (40 rotating bars, 120 orbiting dots, two lines of
+text; 1920x1080, 4 s at 30 fps). Canvas is faster; Remotion saves the work that
+dominates most films. **Remotion is the default**; Canvas is the fallback for
+pure geometry, charts and minimal type, and falling back needs a stated reason.
+
+`video_env_check` reports which one this machine can run.
+
 ## Tools
 
 ### Design
