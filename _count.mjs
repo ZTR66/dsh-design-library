@@ -1,0 +1,18 @@
+import { buildIndex } from './lib/scan.js';
+import { join } from 'node:path';
+const root = join(import.meta.dirname, 'data');
+const idx = await buildIndex([root], { seedRoot: root });
+const by = {};
+for (const e of idx.entries) by[e.kind] = (by[e.kind] ?? 0) + 1;
+console.log('total', idx.total, JSON.stringify(by));
+const styles = idx.entries.filter(e=>e.kind==='video');
+console.log('styles', styles.length);
+const shots = idx.entries.filter(e=>e.kind==='shot');
+console.log('shots', shots.length, shots.slice(0,8).map(e=>e.id).join(' | '));
+const craft = idx.entries.filter(e=>e.kind==='craft');
+console.log('craft', craft.length);
+console.log('craftIDs', craft.map(e=>e.id).slice(0,30).join('\n  '));
+const designs = idx.entries.filter(e=>e.kind==='design').map(e=>e.name);
+console.log('designs', designs.length, designs.slice(0,50).join(', '));
+const skills = idx.entries.filter(e=>e.kind==='skill').map(e=>e.name);
+console.log('skills', skills.length, skills.slice(0,40).join(', '));

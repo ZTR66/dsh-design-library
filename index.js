@@ -879,9 +879,14 @@ function toolSpecs({ getIndex }) {
           // The description says this is not the first step; the output has to say
           // it too, because the model reads the result far more attentively than
           // the spec it agreed to before calling.
-          '> This is a capability report, not a plan. If the style, the structure or the shots are not',
-          '> decided yet, call `video_guide` — it carries the production protocol and the library map.',
-          '> Check the environment once you know what you are building.',
+          '> **This is a capability report, not a plan. Two things come before it:**',
+          '>',
+          '> 1. **Ask the user** whether they want to approve the style, structure and shots, or want it all',
+          '>    decided for them. Default to asking. "The user sounds impatient" is not a reason to skip it —',
+          '>    they want the result sooner, not the question skipped, and a wrong style costs a full re-do.',
+          '> 2. **Call `video_guide`** — it carries the production protocol and the library map.',
+          '>',
+          '> The environment check is meaningful once you know what you are building.',
           '',
         ];
         for (const [group, items] of Object.entries(report.groups)) {
